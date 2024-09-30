@@ -21,8 +21,7 @@ def main():
             'timestamp',
             'seed',
             'exercise_count',
-            'test_passed',
-            'test_output'
+            'test_passed'
         ]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
@@ -33,7 +32,7 @@ def main():
         for submission_path in submission_paths:
             print(f"Processing submission: {submission_path}")
             process_submission(submission_path, data_dir, writer)
-    print(f"Results written to {output_csv}")
+        print(f"Results written to {output_csv}")
 
 def process_submission(submission_path, data_dir, writer):
     # Paths and metadata
@@ -95,7 +94,7 @@ def process_task(task_dir, data_dir, writer, submission_name, unique_id, timesta
     # Adjust task name for data folder (replace underscores with hyphens)
     data_task_name_folder = task_name.replace('_', '-')
     data_task_name = task_name
-    print(f"Adjusted task name for data folder: {data_task_name}")
+    print(f"Adjusted task name for data folder: {data_task_name_folder}")
 
     # Paths to student's implementation and test script
     student_code_path = os.path.join(task_dir, f'{task_name}.py')
@@ -134,8 +133,10 @@ def process_task(task_dir, data_dir, writer, submission_name, unique_id, timesta
         print(f"Wrote results to CSV for task {task_name}")
 
 def run_test(temp_dir, test_script_name, task_name):
-    # Command to run the test script
-    cmd = ['python', test_script_name]
+    # Remove '.py' to get module name
+    test_module_name = os.path.splitext(test_script_name)[0]
+    # Command to run the test script as a unittest module
+    cmd = ['python', '-m', 'unittest', test_module_name]
     print(f"Running test command: {cmd}")
 
     # Environment variables
