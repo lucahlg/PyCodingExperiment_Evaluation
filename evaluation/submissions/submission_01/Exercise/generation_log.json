@@ -1,0 +1,15 @@
+[
+    {
+        "unique_id": "30d916ed-ebf6-41fe-b184-e67f5704ad84",
+        "timestamp": "2024-09-30 15:17:08",
+        "seed": 5577582547644526794,
+        "exercise_count": 5,
+        "exercises": [
+            "two-fer",
+            "hamming",
+            "collatz-conjecture",
+            "word-count",
+            "sgf-parsing"
+        ]
+    }
+]

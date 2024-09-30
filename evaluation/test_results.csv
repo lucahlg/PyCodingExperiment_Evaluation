@@ -1,0 +1,6 @@
+student_submission,task_number,task_name,unique_id,timestamp,seed,exercise_count,test_passed,test_output
+submission_01,01,two_fer,30d916ed-ebf6-41fe-b184-e67f5704ad84,2024-09-30 15:17:08,5577582547644526794,5,True,
+submission_01,02,hamming,30d916ed-ebf6-41fe-b184-e67f5704ad84,2024-09-30 15:17:08,5577582547644526794,5,True,
+submission_01,03,collatz_conjecture,30d916ed-ebf6-41fe-b184-e67f5704ad84,2024-09-30 15:17:08,5577582547644526794,5,True,
+submission_01,04,word_count,30d916ed-ebf6-41fe-b184-e67f5704ad84,2024-09-30 15:17:08,5577582547644526794,5,True,
+submission_01,05,sgf_parsing,30d916ed-ebf6-41fe-b184-e67f5704ad84,2024-09-30 15:17:08,5577582547644526794,5,True,
