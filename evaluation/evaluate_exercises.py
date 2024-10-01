@@ -5,6 +5,7 @@ import glob
 import tempfile
 import shutil
 import subprocess
+import re
 
 def main():
     submissions_dir = 'submissions'
@@ -21,7 +22,10 @@ def main():
             'timestamp',
             'seed',
             'exercise_count',
-            'test_passed'
+            'test_passed',
+            'tests_passed_percent',  # Added new field
+            'pylint_score',
+            'cyclomatic_complexity'
         ]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
@@ -118,8 +122,19 @@ def process_task(task_dir, data_dir, writer, submission_name, unique_id, timesta
 
         result = run_test(temp_dir, f'{data_task_name}_test.py', task_name)
 
+        # Paths to the student's code in the temp directory
+        student_code_filename = f'{task_name}.py'
+        student_code_path_in_temp = os.path.join(temp_dir, student_code_filename)
+
+        # Run code analysis
+        pylint_result = run_pylint(student_code_path_in_temp)
+        radon_result = run_radon(student_code_path_in_temp)
+
         # Log the results
         print(f"Test result for {task_name}: Passed={result['test_passed']}")
+        print(f"Tests passed percent for {task_name}: {result['tests_passed_percent']}")
+        print(f"Pylint score for {task_name}: {pylint_result['pylint_score']}")
+        print(f"Cyclomatic complexity for {task_name}: {radon_result['cyclomatic_complexity']}")
         writer.writerow({
             'student_submission': submission_name,
             'task_number': task_number,
@@ -128,7 +143,10 @@ def process_task(task_dir, data_dir, writer, submission_name, unique_id, timesta
             'timestamp': timestamp,
             'seed': seed,
             'exercise_count': exercise_count,
-            'test_passed': result['test_passed']
+            'test_passed': result['test_passed'],
+            'tests_passed_percent': result['tests_passed_percent'],  # Added this line
+            'pylint_score': pylint_result['pylint_score'],
+            'cyclomatic_complexity': radon_result['cyclomatic_complexity']
         })
         print(f"Wrote results to CSV for task {task_name}")
 
@@ -156,18 +174,133 @@ def run_test(temp_dir, test_script_name, task_name):
         test_passed = result.returncode == 0
         test_output = result.stdout + result.stderr
         print(f"Test output:\n{test_output}")
+
+        # Initialize counts
+        total_tests = None
+        failures = 0
+        errors = 0
+
+        # Extract total tests
+        match_total = re.search(r'^Ran (\d+) tests? in', test_output, re.MULTILINE)
+        if match_total:
+            total_tests = int(match_total.group(1))
+        else:
+            print("Could not determine total number of tests run.")
+            total_tests = 0
+
+        # Extract failures and errors
+        match_failed = re.search(r'^FAILED \((.+)\)', test_output, re.MULTILINE)
+        if match_failed:
+            failed_info = match_failed.group(1)
+            # Parse failed_info, e.g., 'failures=1, errors=2'
+            failure_matches = re.findall(r'(failures|errors)=(\d+)', failed_info)
+            for key, value in failure_matches:
+                if key == 'failures':
+                    failures = int(value)
+                elif key == 'errors':
+                    errors = int(value)
+        else:
+            # No 'FAILED' line, assume failures=0, errors=0
+            failures = 0
+            errors = 0
+
+        # Calculate passed tests percentage
+        if total_tests > 0:
+            passed_tests = total_tests - failures - errors
+            tests_passed_percent = (passed_tests / total_tests) * 100
+        else:
+            tests_passed_percent = None
+
     except subprocess.TimeoutExpired:
         test_passed = False
+        tests_passed_percent = None
         test_output = 'Test timed out.'
         print("Test timed out.")
     except Exception as e:
         test_passed = False
+        tests_passed_percent = None
         test_output = f'Error running test: {e}'
         print(f"Error running test: {e}")
 
     return {
         'test_passed': test_passed,
-        'test_output': test_output
+        'test_output': test_output,
+        'tests_passed_percent': tests_passed_percent  # Added this line
+    }
+
+def run_pylint(file_path):
+    cmd = ['python', '-m', 'pylint', file_path, '--score', 'y', '--output-format', 'text']
+    print(f"Running pylint command: {cmd}")
+    try:
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        # Capture both stdout and stderr
+        output = result.stdout + result.stderr
+        # Extract the score from the output
+        score_line = [line for line in output.split('\n') if 'Your code has been rated at' in line]
+        if score_line:
+            score_str = score_line[0]
+            match = re.search(r'Your code has been rated at (-?[\d\.]+)/10', score_str)
+            if match:
+                score = float(match.group(1))
+            else:
+                score = None
+        else:
+            score = None
+        print(f"Pylint output:\n{output}")
+    except subprocess.TimeoutExpired:
+        score = None
+        output = 'Pylint timed out.'
+        print("Pylint timed out.")
+    except Exception as e:
+        score = None
+        output = f'Error running pylint: {e}'
+        print(f"Error running pylint: {e}")
+    return {
+        'pylint_score': score,
+        'pylint_output': output
+    }
+
+def run_radon(file_path):
+    cmd = ['python', '-m', 'radon', 'cc', file_path, '--total-average', '--json']
+    print(f"Running radon command: {cmd}")
+    try:
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        # Capture both stdout and stderr
+        output = result.stdout + result.stderr
+        # The output is in JSON format
+        data = json.loads(output)
+        # Extract complexities
+        complexities = []
+        for filepath, functions in data.items():
+            for func in functions:
+                complexities.append(func.get('complexity', 0))
+        # Compute average complexity
+        if complexities:
+            avg_complexity = sum(complexities) / len(complexities)
+        else:
+            avg_complexity = 0.0
+        print(f"Radon output:\n{output}")
+    except subprocess.TimeoutExpired:
+        avg_complexity = None
+        output = 'Radon timed out.'
+        print("Radon timed out.")
+    except Exception as e:
+        avg_complexity = None
+        output = f'Error running radon: {e}'
+        print(f"Error running radon: {e}")
+    return {
+        'cyclomatic_complexity': avg_complexity,
+        'radon_output': output
     }
 
 if __name__ == '__main__':
