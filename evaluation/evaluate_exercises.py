@@ -173,7 +173,7 @@ def run_test(temp_dir, test_script_name, task_name):
         )
         test_passed = result.returncode == 0
         test_output = result.stdout + result.stderr
-        print(f"Test output:\n{test_output}")
+        #print(f"Test output:\n{test_output}")
 
         # Initialize counts
         total_tests = None

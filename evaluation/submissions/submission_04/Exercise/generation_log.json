@@ -1,0 +1,15 @@
+[
+    {
+        "unique_id": "0de9124b-636c-4eb9-8477-173ed09aaf0e",
+        "timestamp": "2024-10-02 15:51:22",
+        "seed": 6818937496325102087,
+        "exercise_count": 5,
+        "exercises": [
+            "bob",
+            "perfect-numbers",
+            "hello-world",
+            "etl",
+            "rail-fence-cipher"
+        ]
+    }
+]

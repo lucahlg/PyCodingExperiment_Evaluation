@@ -1,0 +1,15 @@
+[
+    {
+        "unique_id": "OpenHands Agent with GPT4o-mini",
+        "timestamp": "2024-10-03 17:36:11",
+        "seed": "agent",
+        "exercise_count": 5,
+        "exercises": [
+            "accumulate",
+            "acronym",
+            "affine-cipher",
+            "all-your-base",
+            "allergies"
+        ]
+    }
+]
