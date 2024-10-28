@@ -1,0 +1,78 @@
+{
+    "patientId": "1234567890",
+    "name": "Jane Doe",
+    "dateOfBirth": "1980-01-01",
+    "gender": "Female",
+    "address": {
+        "streetAddress": "123 Main Street",
+        "city": "Anytown",
+        "state": "CA",
+        "zipCode": "12345"
+    },
+    "phoneNumbers": [
+        {
+            "type": "Mobile",
+            "number": "123-456-7890"
+        },
+        {
+            "type": "Home",
+            "number": "987-654-3210"
+        }
+    ],
+    "diagnoses": [
+        {
+            "code": "I10",
+            "description": "Essential hypertension"
+        },
+        {
+            "code": "E11.9",
+            "description": "Type 2 diabetes mellitus without complications"
+        }
+    ],
+    "procedures": [
+        {
+            "code": "0039T",
+            "description": "Appendectomy"
+        },
+        {
+            "code": "43210",
+            "description": "Cholecystectomy"
+        }
+    ],
+    "allergies": [
+        {
+            "name": "Penicillin",
+            "severity": "Severe",
+            "reaction": "Anaphylaxis"
+        },
+        {
+            "name": "Sulfa drugs",
+            "severity": "Moderate",
+            "reaction": "Rash"
+        }
+    ],
+    "medications": [
+        {
+            "name": "Lisinopril",
+            "dosage": "10 mg daily",
+            "frequency": "Once a day"
+        },
+        {
+            "name": "Metformin",
+            "dosage": "500 mg twice a day",
+            "frequency": "Twice a day"
+        }
+    ],
+    "immunizations": [
+        {
+            "name": "MMR",
+            "date": "2000-01-01",
+            "booster": true
+        },
+        {
+            "name": "Tdap",
+            "date": "2010-01-01",
+            "booster": false
+        }
+    ]
+}

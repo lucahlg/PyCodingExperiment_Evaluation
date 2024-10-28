@@ -1,0 +1,46 @@
+{
+    "name": "Product Brochure",
+    "description": "A brochure showcasing our company's products and services.",
+    "dimensions": {
+        "height": 210,
+        "width": 297
+    },
+    "material": "paper",
+    "ink": "water-based",
+    "colors": [
+        "black",
+        "white",
+        "blue"
+    ],
+    "fonts": [
+        "Arial",
+        "Helvetica",
+        "Times New Roman"
+    ],
+    "images": [
+        {
+            "url": "https://example.com/image1.jpg",
+            "width": 100,
+            "height": 100
+        },
+        {
+            "url": "https://example.com/image2.jpg",
+            "width": 200,
+            "height": 200
+        }
+    ],
+    "texts": [
+        {
+            "content": "Welcome to our company!",
+            "font": "Arial",
+            "size": 16,
+            "color": "black"
+        },
+        {
+            "content": "We offer a wide range of products and services to meet your needs.",
+            "font": "Helvetica",
+            "size": 12,
+            "color": "blue"
+        }
+    ]
+}

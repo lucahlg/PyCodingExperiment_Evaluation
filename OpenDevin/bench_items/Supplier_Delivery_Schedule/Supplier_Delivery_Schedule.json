@@ -1,0 +1,26 @@
+{
+    "scheduleId": "SUP-DS-001",
+    "supplierId": "SUP-001",
+    "purchaseOrderId": "PO-001",
+    "scheduleDate": "2023-03-08",
+    "items": [
+        {
+            "itemNumber": "ITEM-001",
+            "quantity": 100,
+            "unitOfMeasure": "EA",
+            "deliveryDate": "2023-03-15"
+        },
+        {
+            "itemNumber": "ITEM-002",
+            "quantity": 200,
+            "unitOfMeasure": "BX",
+            "deliveryDate": "2023-03-22"
+        }
+    ],
+    "supplierAddress": {
+        "streetAddress": "123 Main Street",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345"
+    }
+}

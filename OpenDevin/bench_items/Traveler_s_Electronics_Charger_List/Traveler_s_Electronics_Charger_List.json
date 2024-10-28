@@ -1,0 +1,77 @@
+{
+    "listName": "My Electronics Charger List",
+    "chargers": [
+        {
+            "chargerType": "USB-C",
+            "wattage": 65,
+            "numberOfPorts": 2,
+            "brand": "Anker",
+            "model": "PowerPort Atom III Slim",
+            "weight": 0.3,
+            "dimensions": {
+                "length": 8.5,
+                "width": 4.5,
+                "height": 2.5
+            },
+            "inputVoltage": 100,
+            "outputVoltage": 20,
+            "outputCurrent": 3,
+            "supportedDevices": [
+                "iPhone",
+                "iPad",
+                "MacBook",
+                "Android Phone",
+                "Android Tablet"
+            ],
+            "additionalFeatures": [
+                "Fast Charging",
+                "Foldable Plug"
+            ]
+        },
+        {
+            "chargerType": "USB-A",
+            "wattage": 12,
+            "numberOfPorts": 1,
+            "brand": "Apple",
+            "model": "5W USB Power Adapter",
+            "weight": 0.1,
+            "dimensions": {
+                "length": 5,
+                "width": 3,
+                "height": 2
+            },
+            "inputVoltage": 120,
+            "outputVoltage": 5,
+            "outputCurrent": 2.4,
+            "supportedDevices": [
+                "iPhone",
+                "iPad"
+            ],
+            "additionalFeatures": []
+        },
+        {
+            "chargerType": "Wireless",
+            "wattage": 10,
+            "numberOfPorts": 1,
+            "brand": "Samsung",
+            "model": "Wireless Charger Duo",
+            "weight": 0.2,
+            "dimensions": {
+                "length": 10,
+                "width": 8,
+                "height": 1.5
+            },
+            "inputVoltage": 120,
+            "outputVoltage": 9,
+            "outputCurrent": 1,
+            "supportedDevices": [
+                "iPhone",
+                "Android Phone"
+            ],
+            "additionalFeatures": [
+                "Fast Charging"
+            ]
+        }
+    ],
+    "lastUpdated": "2023-03-08T18:30:00Z"
+}

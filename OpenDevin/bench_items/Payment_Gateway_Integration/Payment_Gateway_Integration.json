@@ -1,0 +1,12 @@
+{
+    "provider": "stripe",
+    "status": "active",
+    "credentials": {
+        "key": "sk_test_4eC39HqLyjWDarjtT1zdp7dc",
+        "secret": "pk_test_TyOx4hO93SApvGsqV4aaCS2P"
+    },
+    "config": {
+        "currency": "USD",
+        "descriptor": "Acme Corp"
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "products": [
+        {
+            "productId": "PROD12345",
+            "name": "Awesome Product",
+            "brand": "Acme Corporation",
+            "category": "Electronics",
+            "price": 19.99,
+            "averageRating": 4.5,
+            "numberOfReviews": 100
+        },
+        {
+            "productId": "PROD67890",
+            "name": "Fantastic Gadget",
+            "brand": "XYZ Industries",
+            "category": "Home & Kitchen",
+            "price": 54.99,
+            "averageRating": 4.8,
+            "numberOfReviews": 200
+        }
+    ],
+    "reviews": [
+        {
+            "reviewId": "REV12345",
+            "productId": "PROD12345",
+            "author": "John Smith",
+            "rating": 5,
+            "title": "Great Product!",
+            "content": "This product is amazing! It works perfectly and I love it.",
+            "date": "2023-03-08"
+        },
+        {
+            "reviewId": "REV67890",
+            "productId": "PROD67890",
+            "author": "Jane Doe",
+            "rating": 4,
+            "title": "Good Product",
+            "content": "This product is good, but it could be better. It works well, but it's not as user-friendly as I would like.",
+            "date": "2023-04-15"
+        },
+        {
+            "reviewId": "REV98765",
+            "productId": "PROD12345",
+            "author": "Alice Johnson",
+            "rating": 5,
+            "title": "Highly Recommended!",
+            "content": "This product exceeded my expectations. I'm very happy with it.",
+            "date": "2023-05-20"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "name": "My Data Classification Policy",
+    "description": "This policy defines the data classification rules for my organization.",
+    "rules": [
+        {
+            "condition": {
+                "field": "project",
+                "operator": "EQUALS",
+                "value": "my-project"
+            },
+            "classification": "CONFIDENTIAL"
+        },
+        {
+            "condition": {
+                "field": "dataset",
+                "operator": "STARTS_WITH",
+                "value": "pii"
+            },
+            "classification": "SECRET"
+        }
+    ]
+}

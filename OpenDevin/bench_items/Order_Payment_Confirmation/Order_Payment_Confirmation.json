@@ -1,0 +1,25 @@
+{
+    "order": {
+        "orderNumber": "ORD-12345",
+        "orderDate": "2023-03-08",
+        "items": [
+            {
+                "productId": "PROD-1",
+                "quantity": 2
+            },
+            {
+                "productId": "PROD-2",
+                "quantity": 1
+            }
+        ]
+    },
+    "customer": {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane.doe@example.com"
+    },
+    "payment": {
+        "type": "credit card",
+        "amount": 20.0
+    }
+}

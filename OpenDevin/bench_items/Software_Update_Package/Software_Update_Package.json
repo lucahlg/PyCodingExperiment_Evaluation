@@ -1,0 +1,30 @@
+{
+    "softwareUpdates": [
+        {
+            "id": "SU001",
+            "title": "Security Update for Package A",
+            "description": "This update addresses a critical security vulnerability in Package A. All users are advised to install this update as soon as possible.",
+            "status": "published",
+            "releaseDate": "2023-03-08",
+            "softwarePackage": {
+                "name": "Package A",
+                "description": "Package A is a popular software application used for managing tasks and projects.",
+                "version": "1.5.2",
+                "publisher": "Acme Software"
+            }
+        },
+        {
+            "id": "SU002",
+            "title": "Feature Update for Package B",
+            "description": "This update adds new features and improvements to Package B. Users are encouraged to install this update to take advantage of the new features.",
+            "status": "draft",
+            "releaseDate": "2023-04-12",
+            "softwarePackage": {
+                "name": "Package B",
+                "description": "Package B is a powerful tool for creating and editing documents.",
+                "version": "2.0.1",
+                "publisher": "XYZ Software"
+            }
+        }
+    ]
+}

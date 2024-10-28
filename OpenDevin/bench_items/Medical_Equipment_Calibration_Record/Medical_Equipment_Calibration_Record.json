@@ -1,0 +1,47 @@
+{
+    "medicalEquipmentCalibrationRecord": [
+        {
+            "equipmentId": "EQ1234",
+            "equipmentName": "X-Ray Machine",
+            "equipmentModel": "XR-1000",
+            "equipmentManufacturer": "Acme Medical",
+            "equipmentCalibrationPeriod": {
+                "calibrationInterval": 12
+            },
+            "equipmentCalibrationHistory": [
+                {
+                    "calibrationId": "CAL1234",
+                    "calibrationDate": "2023-03-08",
+                    "technician": "John Smith",
+                    "calibrationStatus": "Calibration Complete",
+                    "notes": "No issues found during calibration."
+                },
+                {
+                    "calibrationId": "CAL4567",
+                    "calibrationDate": "2022-06-15",
+                    "technician": "Jane Doe",
+                    "calibrationStatus": "Calibration In Progress",
+                    "notes": "Minor adjustment made to the X-ray tube."
+                }
+            ]
+        },
+        {
+            "equipmentId": "EQ5678",
+            "equipmentName": "MRI Machine",
+            "equipmentModel": "MR-2000",
+            "equipmentManufacturer": "General Electric",
+            "equipmentCalibrationPeriod": {
+                "calibrationInterval": 18
+            },
+            "equipmentCalibrationHistory": [
+                {
+                    "calibrationId": "CAL8910",
+                    "calibrationDate": "2021-12-20",
+                    "technician": "Michael Jones",
+                    "calibrationStatus": "Needs Calibration",
+                    "notes": "Annual calibration due."
+                }
+            ]
+        }
+    ]
+}

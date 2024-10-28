@@ -1,0 +1,19 @@
+{
+    "service": "GKE Hub",
+    "subscriptionId": "my-subscription-id",
+    "status": "ACTIVE",
+    "displayName": "My GKE Hub Subscription",
+    "description": "This is my GKE Hub subscription.",
+    "membershipState": "ACTIVE",
+    "authConfig": {
+        "type": "WorkloadIdentity",
+        "workloadIdentity": {
+            "membership": "projects/my-project/locations/global/memberships/my-membership",
+            "issuerUrl": "https://my-issuer-url.com",
+            "workloadIdentityProviders": [
+                "projects/my-project/locations/global/workloadIdentityPools/my-workload-identity-pool"
+            ]
+        }
+    },
+    "cloudStateData": {}
+}

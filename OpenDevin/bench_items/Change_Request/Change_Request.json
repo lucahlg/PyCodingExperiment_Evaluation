@@ -1,0 +1,44 @@
+{
+    "id": "CR-1234",
+    "title": "Update the website's design",
+    "description": "The website's design is outdated and needs to be refreshed to attract more visitors.",
+    "status": "in progress",
+    "priority": "high",
+    "requester": {
+        "name": "Alice Smith",
+        "email": "alice.smith@example.com"
+    },
+    "assignedTo": {
+        "name": "John Doe",
+        "email": "john.doe@example.com"
+    },
+    "dueDate": "2023-03-31",
+    "comments": [
+        {
+            "author": {
+                "name": "Alice Smith",
+                "email": "alice.smith@example.com"
+            },
+            "content": "I'd like to see a more modern and user-friendly design.",
+            "date": "2023-02-15"
+        },
+        {
+            "author": {
+                "name": "John Doe",
+                "email": "john.doe@example.com"
+            },
+            "content": "I'll start working on a new design right away.",
+            "date": "2023-02-16"
+        }
+    ],
+    "attachments": [
+        {
+            "name": "Website Design Proposal.pdf",
+            "url": "https://example.com/website-design-proposal.pdf"
+        },
+        {
+            "name": "Current Website Design.png",
+            "url": "https://example.com/current-website-design.png"
+        }
+    ]
+}

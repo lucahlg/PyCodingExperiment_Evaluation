@@ -1,0 +1,81 @@
+{
+    "loyaltyProgram": {
+        "id": "lp-123",
+        "name": "My Loyalty Program",
+        "description": "A loyalty program that rewards customers for their purchases.",
+        "tiers": [
+            {
+                "name": "Bronze",
+                "benefits": [
+                    "10% discount on all purchases",
+                    "Free shipping on orders over $50"
+                ]
+            },
+            {
+                "name": "Silver",
+                "benefits": [
+                    "15% discount on all purchases",
+                    "Free shipping on all orders",
+                    "Early access to new products"
+                ]
+            },
+            {
+                "name": "Gold",
+                "benefits": [
+                    "20% discount on all purchases",
+                    "Free shipping on all orders",
+                    "Early access to new products",
+                    "A dedicated customer service representative"
+                ]
+            }
+        ],
+        "customers": [
+            {
+                "id": "c-123",
+                "firstName": "John",
+                "lastName": "Smith",
+                "addresses": [
+                    {
+                        "streetAddress": "123 Main Street",
+                        "city": "Anytown",
+                        "state": "CA",
+                        "zipCode": "12345"
+                    }
+                ],
+                "phoneNumbers": [
+                    {
+                        "type": "home",
+                        "number": "(123) 456-7890"
+                    },
+                    {
+                        "type": "mobile",
+                        "number": "(987) 654-3210"
+                    }
+                ]
+            },
+            {
+                "id": "c-456",
+                "firstName": "Jane",
+                "lastName": "Doe",
+                "addresses": [
+                    {
+                        "streetAddress": "456 Elm Street",
+                        "city": "Anytown",
+                        "state": "CA",
+                        "zipCode": "12345"
+                    }
+                ],
+                "phoneNumbers": [
+                    {
+                        "type": "home",
+                        "number": "(234) 567-8901"
+                    },
+                    {
+                        "type": "mobile",
+                        "number": "(876) 543-2109"
+                    }
+                ]
+            }
+        ]
+    }
+}

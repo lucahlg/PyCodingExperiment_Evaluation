@@ -1,0 +1,34 @@
+{
+    "title": "My Amazing Day",
+    "date": "2023-03-08",
+    "emotions": [
+        "Happiness",
+        "Surprise"
+    ],
+    "rating": 9,
+    "events": [
+        {
+            "name": "Went to the zoo",
+            "description": "Saw all sorts of amazing animals, including lions, tigers, and bears.",
+            "location": "San Diego Zoo",
+            "date": "2023-03-08"
+        },
+        {
+            "name": "Had dinner with friends",
+            "description": "Caught up with old friends and had a great time.",
+            "location": "Olive Garden",
+            "date": "2023-03-08"
+        }
+    ],
+    "people": [
+        {
+            "name": "Sarah",
+            "relationship": "Friend"
+        },
+        {
+            "name": "John",
+            "relationship": "Friend"
+        }
+    ],
+    "notes": "It was a perfect day!"
+}

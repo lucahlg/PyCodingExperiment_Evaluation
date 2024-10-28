@@ -1,0 +1,98 @@
+{
+    "id": "e482a678-5180-4561-8401-13d3d9e39819",
+    "patient": {
+        "id": "52d61162-8080-4608-9695-51387378a144",
+        "name": "Aiden Smith",
+        "dateOfBirth": "1990-03-08",
+        "gender": "male",
+        "address": "123 Main Street, Anytown, CA 91234",
+        "phoneNumber": "555-123-4567"
+    },
+    "nursingDiagnoses": [
+        {
+            "id": "23423423-4234-2342-3242-324234234234",
+            "name": "Risk for Pressure Ulcers",
+            "definition": "At risk for development of pressure ulcers related to immobility.",
+            "riskFactors": [
+                "Immobility",
+                "Poor nutrition",
+                "Advanced age"
+            ],
+            "relatedFactors": [
+                "Neurological impairment",
+                "Diabetes mellitus"
+            ]
+        },
+        {
+            "id": "56756756-7567-5675-6575-657567567567",
+            "name": "Impaired Physical Mobility",
+            "definition": "Difficulty moving around independently related to musculoskeletal impairment.",
+            "riskFactors": [
+                "Arthritis",
+                "Stroke",
+                "Parkinson's disease"
+            ],
+            "relatedFactors": [
+                "Pain",
+                "Weakness",
+                "Fatigue"
+            ]
+        }
+    ],
+    "goals": [
+        {
+            "id": "12312312-3123-1231-2312-231231231231",
+            "name": "Maintain skin integrity.",
+            "definition": "Patient will maintain intact skin without pressure ulcers.",
+            "targetDate": "2023-06-30"
+        },
+        {
+            "id": "45645645-6456-4564-5645-564564564564",
+            "name": "Improve physical mobility.",
+            "definition": "Patient will ambulate independently with assistive device.",
+            "targetDate": "2023-07-15"
+        }
+    ],
+    "interventions": [
+        {
+            "id": "78978978-9789-7897-8978-897897897897",
+            "name": "Turn and reposition patient every 2 hours.",
+            "definition": "Reposition patient to relieve pressure on bony prominences.",
+            "frequency": "Every 2 hours",
+            "duration": "Until risk of pressure ulcers is resolved"
+        },
+        {
+            "id": "01201201-2012-0120-1201-120120120120",
+            "name": "Provide patient with pressure-relieving mattress.",
+            "definition": "Use a mattress designed to reduce pressure on bony prominences.",
+            "frequency": "Continuous",
+            "duration": "Until risk of pressure ulcers is resolved"
+        },
+        {
+            "id": "34534534-5345-3453-4534-453453453453",
+            "name": "Range of motion exercises.",
+            "definition": "Perform range of motion exercises to maintain joint mobility.",
+            "frequency": "Twice daily",
+            "duration": "Until physical mobility is improved"
+        },
+        {
+            "id": "67867867-8678-6786-7867-786767867867",
+            "name": "Ambulation with assistive device.",
+            "definition": "Assist patient with ambulation using a walker or cane.",
+            "frequency": "Three times daily",
+            "duration": "Until patient is able to ambulate independently"
+        }
+    ],
+    "evaluations": [
+        {
+            "id": "90190190-1901-9019-0190-019090190190",
+            "date": "2023-06-20",
+            "result": "Patient's skin is intact without any signs of pressure ulcers."
+        },
+        {
+            "id": "23423423-4234-2342-3242-324234234234",
+            "date": "2023-07-05",
+            "result": "Patient is able to ambulate independently with a walker."
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "id": "product-spec-modification-1",
+    "productSpecCharacteristic": {
+        "id": "product-spec-characteristic-1",
+        "name": "Color"
+    },
+    "productSpecCharacteristicValue": {
+        "id": "product-spec-characteristic-value-1",
+        "valueType": {
+            "id": "product-spec-characteristic-value-type-1",
+            "name": "String"
+        },
+        "value": "Red"
+    },
+    "implementationDate": "2023-03-08",
+    "implementationConstraint": "None"
+}

@@ -1,0 +1,18 @@
+{
+    "productId": "PROD-12345",
+    "productionDate": "2023-03-08",
+    "productionQuantity": 1000,
+    "totalProductionCost": 100000,
+    "directCosts": {
+        "materialCosts": 50000,
+        "laborCosts": 30000,
+        "otherDirectCosts": 5000
+    },
+    "indirectCosts": {
+        "rentAndUtilities": 5000,
+        "depreciation": 2000,
+        "otherIndirectCosts": 1000
+    },
+    "productionEfficiency": 0.95,
+    "productionQuality": "Good"
+}

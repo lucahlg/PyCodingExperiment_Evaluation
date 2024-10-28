@@ -1,0 +1,53 @@
+{
+    "appraisalId": "APPR-001",
+    "appraisalYear": 2023,
+    "employee": {
+        "employeeId": "EMP-001",
+        "firstName": "Aiden",
+        "lastName": "Smith",
+        "email": "aiden.smith@example.com",
+        "department": {
+            "departmentCode": "DEPT-01",
+            "departmentName": "Sales"
+        },
+        "jobTitle": "Sales Associate"
+    },
+    "overallRating": {
+        "ratingId": "RATING-01",
+        "ratingName": "Excellent",
+        "ratingValue": 5
+    },
+    "categories": [
+        {
+            "categoryId": "CAT-01",
+            "categoryName": "Communication"
+        },
+        {
+            "categoryId": "CAT-02",
+            "categoryName": "Teamwork"
+        },
+        {
+            "categoryId": "CAT-03",
+            "categoryName": "Problem Solving"
+        }
+    ],
+    "ratings": [
+        {
+            "ratingId": "RATING-02",
+            "ratingName": "Very Good",
+            "ratingValue": 4
+        },
+        {
+            "ratingId": "RATING-03",
+            "ratingName": "Good",
+            "ratingValue": 3
+        },
+        {
+            "ratingId": "RATING-04",
+            "ratingName": "Fair",
+            "ratingValue": 2
+        }
+    ],
+    "comments": "Aiden is a valuable asset to the Sales team. He consistently exceeds sales targets and provides excellent customer service. He is also a team player and is always willing to help out his colleagues.",
+    "appraisalDate": "2023-03-08"
+}

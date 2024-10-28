@@ -1,0 +1,15 @@
+{
+    "date": "2023-03-08",
+    "location": "New York City",
+    "temperature": {
+        "unit": "C",
+        "value": 15
+    },
+    "condition": "Clouds",
+    "wind": {
+        "speed": 10,
+        "direction": "NW"
+    },
+    "humidity": 70,
+    "pressure": 1013
+}

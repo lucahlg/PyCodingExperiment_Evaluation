@@ -1,0 +1,22 @@
+{
+    "orderNumber": "PO1234567890",
+    "supplier": {
+        "supplierId": "SUP12345",
+        "supplierName": "Acme Corporation"
+    },
+    "items": [
+        {
+            "itemId": "ITEM1234567890",
+            "quantity": 10,
+            "unitPrice": 10.0
+        },
+        {
+            "itemId": "ITEM9876543210",
+            "quantity": 20,
+            "unitPrice": 20.0
+        }
+    ],
+    "orderDate": "2023-03-08T12:00:00Z",
+    "deliveryDate": "2023-03-15T12:00:00Z",
+    "totalCost": 300.0
+}

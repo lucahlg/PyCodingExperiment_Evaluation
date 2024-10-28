@@ -1,0 +1,70 @@
+{
+    "auction": {
+        "name": "Sotheby's Impressionist & Modern Art Evening Sale",
+        "location": "New York",
+        "startDate": "2023-05-16T19:00:00Z",
+        "endDate": "2023-05-17T21:00:00Z"
+    },
+    "artworks": [
+        {
+            "title": "Les Nymph\u00e9as",
+            "artist": {
+                "name": "Claude Monet",
+                "nationality": "French"
+            },
+            "year": 1906,
+            "medium": "Oil on canvas",
+            "dimensions": {
+                "height": 89.5,
+                "width": 92.1,
+                "unit": "cm"
+            },
+            "description": "This painting is one of Monet's most famous works, and it depicts a water lily pond in his garden at Giverny.",
+            "estimate": {
+                "low": 20000000,
+                "high": 30000000,
+                "currency": "USD"
+            }
+        },
+        {
+            "title": "Starry Night",
+            "artist": {
+                "name": "Vincent van Gogh",
+                "nationality": "Dutch"
+            },
+            "year": 1889,
+            "medium": "Oil on canvas",
+            "dimensions": {
+                "height": 73.7,
+                "width": 92.1,
+                "unit": "cm"
+            },
+            "description": "This painting is one of van Gogh's most famous works, and it depicts a swirling night sky over a small village.",
+            "estimate": {
+                "low": 10000000,
+                "high": 15000000,
+                "currency": "USD"
+            }
+        },
+        {
+            "title": "Guernica",
+            "artist": {
+                "name": "Pablo Picasso",
+                "nationality": "Spanish"
+            },
+            "year": 1937,
+            "medium": "Oil on canvas",
+            "dimensions": {
+                "height": 349.3,
+                "width": 776.6,
+                "unit": "cm"
+            },
+            "description": "This painting is one of Picasso's most famous works, and it depicts the bombing of the Basque town of Guernica during the Spanish Civil War.",
+            "estimate": {
+                "low": 50000000,
+                "high": 70000000,
+                "currency": "USD"
+            }
+        }
+    ]
+}

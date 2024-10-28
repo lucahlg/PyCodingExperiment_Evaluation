@@ -1,0 +1,20 @@
+{
+    "calibrationDate": "2023-03-08",
+    "calibrationReference": "CAL-123456",
+    "calibrationType": "Annual Calibration",
+    "expirationDate": "2024-03-07",
+    "instrumentId": "INST-456789",
+    "organizationId": "ORG-987654",
+    "additionalNotes": "The calibration was performed using a NIST-traceable standard.",
+    "calibrationAgency": "Acme Calibration Services",
+    "calibrationProcedure": "ISO 17025",
+    "calibrator": "John Smith",
+    "measurementStandards": [
+        "NIST SRM 12345",
+        "NIST SRM 23456"
+    ],
+    "referenceMaterials": [
+        "RM-12345",
+        "RM-23456"
+    ]
+}

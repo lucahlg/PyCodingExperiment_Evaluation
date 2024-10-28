@@ -1,0 +1,59 @@
+[
+    {
+        "code": "IDDQD",
+        "description": "Enables God Mode, making the player invincible.",
+        "platform": [
+            "PC"
+        ],
+        "category": "God Mode",
+        "requirements": [],
+        "disclaimer": "This cheat code may disable achievements."
+    },
+    {
+        "code": "IDKFA",
+        "description": "Gives the player all weapons and ammo.",
+        "platform": [
+            "PC",
+            "PlayStation",
+            "Xbox"
+        ],
+        "category": "Infinite Ammo",
+        "requirements": [],
+        "disclaimer": "This cheat code may cause the game to crash."
+    },
+    {
+        "code": "rosebud",
+        "description": "Adds 1,000 simoleons to the player's household funds.",
+        "platform": [
+            "PC"
+        ],
+        "category": "Unlimited Money",
+        "requirements": [],
+        "disclaimer": "This cheat code can be used multiple times."
+    },
+    {
+        "code": "unlockall",
+        "description": "Unlocks all levels and missions in the game.",
+        "platform": [
+            "PlayStation",
+            "Xbox"
+        ],
+        "category": "Unlock All Levels",
+        "requirements": [
+            "Complete the first 10 missions."
+        ],
+        "disclaimer": "This cheat code can only be used once."
+    },
+    {
+        "code": "konami",
+        "description": "Unlocks a secret character or bonus stage.",
+        "platform": [
+            "Nintendo"
+        ],
+        "category": "Hidden Characters",
+        "requirements": [
+            "Press the following buttons in sequence: Up, Up, Down, Down, Left, Right, Left, Right, B, A."
+        ],
+        "disclaimer": "This cheat code only works on the original NES version of the game."
+    }
+]

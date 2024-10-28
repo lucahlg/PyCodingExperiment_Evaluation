@@ -1,0 +1,23 @@
+{
+    "_id": "62014048f772308953047285",
+    "machineId": "M-1001",
+    "maintenanceType": "Routine Maintenance",
+    "maintenanceDate": "2023-03-15",
+    "maintenanceDetails": "Performed general maintenance tasks, including cleaning, lubrication, and inspection of all components. Replaced worn bearings and seals.",
+    "maintenanceDuration": 4,
+    "maintenanceCost": 250,
+    "performedBy": "John Smith",
+    "notes": "Machine is running smoothly after maintenance.",
+    "attachments": [
+        {
+            "attachmentName": "Maintenance Report",
+            "attachmentType": "Document",
+            "attachmentUrl": "https://example.com/maintenance-report.pdf"
+        },
+        {
+            "attachmentName": "Machine Inspection Photos",
+            "attachmentType": "Image",
+            "attachmentUrl": "https://example.com/machine-inspection-photos.zip"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "episode_id": "episode-123",
+    "outtake_id": "outtake-456",
+    "duration": 30,
+    "filepath": "/path/to/outtake.mp3",
+    "notes": "This outtake is a funny conversation between the hosts that didn't make it into the final cut.",
+    "tags": [
+        "funny",
+        "blooper"
+    ]
+}

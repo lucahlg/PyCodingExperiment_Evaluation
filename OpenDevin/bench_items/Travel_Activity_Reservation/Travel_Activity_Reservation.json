@@ -1,0 +1,56 @@
+{
+    "reservationId": 12345,
+    "reservationDate": "2023-03-08",
+    "reservationConfirmation": "ABC123",
+    "numberOfTravelers": 2,
+    "travelActivity": {
+        "activityId": 1,
+        "activityName": "Grand Canyon Helicopter Tour",
+        "activityDescription": "Experience the grandeur of the Grand Canyon from a unique perspective on this unforgettable helicopter tour.",
+        "activityType": "TOUR",
+        "activityProvider": {
+            "providerId": 10,
+            "providerName": "Maverick Helicopters"
+        },
+        "activityPrice": 199.99,
+        "activityLocation": {
+            "locationId": 1,
+            "locationName": "Grand Canyon National Park",
+            "locationAddress": {
+                "addressLine1": "Grand Canyon Village",
+                "city": "Tusayan",
+                "state": "AZ",
+                "postalCode": "86023",
+                "country": "USA"
+            }
+        },
+        "activityAvailability": [
+            "Monday",
+            "Wednesday",
+            "Friday",
+            "Sunday"
+        ],
+        "activityImages": [
+            "https://example.com/images/helicopter-tour-1.jpg",
+            "https://example.com/images/helicopter-tour-2.jpg",
+            "https://example.com/images/helicopter-tour-3.jpg"
+        ]
+    },
+    "customer": {
+        "customerId": 1001,
+        "customerName": "John Smith",
+        "customerEmail": "john.smith@example.com",
+        "customerContact": "555-123-4567",
+        "customerAddress": {
+            "addressLine1": "123 Main Street",
+            "city": "Anytown",
+            "state": "CA",
+            "postalCode": "91234",
+            "country": "USA"
+        }
+    },
+    "specialRequests": [
+        "Window seat",
+        "Vegetarian meal"
+    ]
+}

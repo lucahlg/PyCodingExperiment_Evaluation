@@ -1,0 +1,36 @@
+{
+    "title": "Lead Role in Upcoming Feature Film",
+    "location": "Los Angeles, CA",
+    "description": "Seeking talented actors for lead role in upcoming feature film. The film is a coming-of-age story about a young woman who discovers her true identity. The lead role is for a female actor between the ages of 18 and 25. The character is strong, independent, and resilient.",
+    "castingDirector": "Jane Smith",
+    "roles": [
+        {
+            "name": "Sarah",
+            "description": "The lead role. Sarah is a young woman who is struggling to find her place in the world. She is intelligent, creative, and passionate, but she is also insecure and self-destructive. She is looking for a sense of belonging and purpose.",
+            "ageRange": "18-25",
+            "gender": "female",
+            "ethnicity": [
+                "Caucasian"
+            ],
+            "numLines": 100,
+            "speakingRole": true
+        },
+        {
+            "name": "John",
+            "description": "Sarah's love interest. John is a kind, compassionate, and supportive young man. He is the one person who can see Sarah for who she really is. He helps her to believe in herself and to find her own strength.",
+            "ageRange": "20-28",
+            "gender": "male",
+            "ethnicity": [
+                "African American"
+            ],
+            "numLines": 50,
+            "speakingRole": true
+        }
+    ],
+    "auditionDate": "2023-03-15",
+    "auditionTime": "10:00 AM",
+    "compensation": 1000,
+    "union": true,
+    "contactEmail": "casting@example.com",
+    "contactPhone": "(323) 555-1212"
+}

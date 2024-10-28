@@ -1,0 +1,49 @@
+[
+    {
+        "name": "The Office",
+        "country": "US",
+        "numberOfSeasons": 9,
+        "genres": [
+            "Comedy"
+        ],
+        "ratings": [
+            {
+                "value": 8.9,
+                "count": 100000
+            }
+        ]
+    },
+    {
+        "name": "Game of Thrones",
+        "country": "US",
+        "numberOfSeasons": 8,
+        "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Fantasy"
+        ],
+        "ratings": [
+            {
+                "value": 9.2,
+                "count": 200000
+            }
+        ]
+    },
+    {
+        "name": "Breaking Bad",
+        "country": "US",
+        "numberOfSeasons": 5,
+        "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+        ],
+        "ratings": [
+            {
+                "value": 9.5,
+                "count": 300000
+            }
+        ]
+    }
+]

@@ -1,0 +1,10 @@
+{
+    "id": "cr-123456",
+    "offerId": "of-654321",
+    "customerId": "cu-987654",
+    "storeId": "st-246810",
+    "couponCode": "ABC123",
+    "redemptionDate": "2023-03-08T12:00:00Z",
+    "amountPaid": 10.0,
+    "status": "PROCESSED"
+}

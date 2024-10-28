@@ -1,0 +1,40 @@
+{
+    "planId": "P123456789",
+    "coverageLevel": "standard",
+    "policyNumber": "P987654321",
+    "subscriber": {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "dateOfBirth": "1980-01-01"
+    },
+    "dependents": [
+        {
+            "firstName": "John",
+            "lastName": "Doe",
+            "dateOfBirth": "2000-01-01"
+        },
+        {
+            "firstName": "Mary",
+            "lastName": "Doe",
+            "dateOfBirth": "2002-01-01"
+        }
+    ],
+    "primaryPhysician": {
+        "firstName": "Dr. John",
+        "lastName": "Smith",
+        "npiNumber": "1234567890",
+        "phoneNumber": "555-123-4567",
+        "address": {
+            "streetAddress": "123 Main Street",
+            "city": "Anytown",
+            "state": "CA",
+            "zipCode": "91234"
+        }
+    },
+    "emergencyContact": {
+        "firstName": "John",
+        "lastName": "Smith",
+        "phoneNumber": "555-987-6543",
+        "relationship": "spouse"
+    }
+}

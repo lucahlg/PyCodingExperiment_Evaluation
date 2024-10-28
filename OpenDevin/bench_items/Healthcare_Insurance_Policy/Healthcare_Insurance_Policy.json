@@ -1,0 +1,59 @@
+{
+    "id": "0962408a-7433-4273-96b3-9392a589488b",
+    "policyNumber": "INS-1234567890",
+    "issueDate": "2023-03-08",
+    "effectiveDate": "2023-04-01",
+    "expirationDate": "2024-03-31",
+    "policyholder": {
+        "id": "628a2058-0097-484e-9149-1f874f71072f",
+        "name": "Aiden Smith",
+        "email": "aiden.smith@example.com",
+        "phoneNumber": "555-123-4567",
+        "address": {
+            "streetAddress": "123 Main Street",
+            "city": "Anytown",
+            "state": "CA",
+            "zipCode": "91234"
+        }
+    },
+    "dependents": [
+        {
+            "id": "6926371c-129f-404e-8699-51670409876b",
+            "name": "Isabella Smith",
+            "email": "isabella.smith@example.com",
+            "phoneNumber": "555-234-5678",
+            "address": {
+                "streetAddress": "123 Main Street",
+                "city": "Anytown",
+                "state": "CA",
+                "zipCode": "91234"
+            }
+        }
+    ],
+    "coverages": [
+        {
+            "type": "Medical",
+            "deductible": 1000,
+            "copay": 20,
+            "coinsurance": 0.8
+        },
+        {
+            "type": "Dental",
+            "deductible": 500,
+            "copay": 10,
+            "coinsurance": 0.7
+        },
+        {
+            "type": "Vision",
+            "deductible": 250,
+            "copay": 5,
+            "coinsurance": 0.5
+        },
+        {
+            "type": "Prescription Drug",
+            "deductible": 300,
+            "copay": 15,
+            "coinsurance": 0.6
+        }
+    ]
+}

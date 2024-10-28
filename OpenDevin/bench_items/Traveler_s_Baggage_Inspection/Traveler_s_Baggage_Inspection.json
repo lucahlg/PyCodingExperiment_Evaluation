@@ -1,0 +1,26 @@
+{
+    "id": "39958433-0898-4371-81b1-935555343177",
+    "traveler": {
+        "name": "Aiden Smith",
+        "nationality": "United States"
+    },
+    "baggageItems": [
+        {
+            "id": "69258433-0898-4371-81b1-935555343177",
+            "personalItems": [
+                "Clothing",
+                "Toiletries",
+                "Electronics"
+            ]
+        },
+        {
+            "id": "79258433-0898-4371-81b1-935555343177",
+            "personalItems": [
+                "Souvenirs",
+                "Toiletries"
+            ]
+        }
+    ],
+    "inspectionResult": "Allowed",
+    "notes": "The traveler was cooperative and respectful during the inspection."
+}

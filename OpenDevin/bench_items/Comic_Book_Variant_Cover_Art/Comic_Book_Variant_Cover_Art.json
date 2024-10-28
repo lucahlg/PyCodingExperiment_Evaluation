@@ -1,0 +1,22 @@
+{
+    "id": "variant-cover-art-1",
+    "title": "Amazing Spider-Man Variant Cover #1",
+    "description": "A special variant cover for The Amazing Spider-Man #1, featuring Spider-Man in a new costume.",
+    "imageUrl": "https://example.com/amazing-spider-man-variant-cover-1.jpg",
+    "publishedDate": "2023-03-08",
+    "colorist": {
+        "name": "David Curiel"
+    },
+    "inker": {
+        "name": "Mark Morales"
+    },
+    "penciler": {
+        "name": "Ryan Stegman"
+    },
+    "publisher": {
+        "name": "Marvel Comics"
+    },
+    "series": {
+        "title": "The Amazing Spider-Man"
+    }
+}

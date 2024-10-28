@@ -1,0 +1,35 @@
+{
+    "id": "01234567-89ab-cdef-0123-456789abcdef",
+    "title": "Engineering Team Meeting",
+    "description": "Discuss the latest project updates and plan for the upcoming sprint.",
+    "startTime": "2023-03-08T10:00:00Z",
+    "endTime": "2023-03-08T11:00:00Z",
+    "location": {
+        "name": "Conference Room A",
+        "address": "123 Main Street, Anytown, CA 91234"
+    },
+    "attendees": [
+        {
+            "name": "Alice Smith",
+            "email": "alice.smith@example.com"
+        },
+        {
+            "name": "Bob Jones",
+            "email": "bob.jones@example.com"
+        },
+        {
+            "name": "Carol Green",
+            "email": "carol.green@example.com"
+        }
+    ],
+    "reminders": [
+        {
+            "time": "2023-03-08T09:30:00Z",
+            "method": "email"
+        },
+        {
+            "time": "2023-03-08T09:45:00Z",
+            "method": "popup"
+        }
+    ]
+}

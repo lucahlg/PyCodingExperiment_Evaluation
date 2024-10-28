@@ -1,0 +1,55 @@
+{
+    "id": 1,
+    "name": "My Wish List",
+    "description": "A list of things I want to buy.",
+    "createdAt": "2023-03-08T12:00:00Z",
+    "updatedAt": "2023-03-08T12:00:00Z",
+    "items": [
+        {
+            "id": 1,
+            "name": "New iPhone",
+            "description": "The latest iPhone with all the bells and whistles.",
+            "price": 1000,
+            "image": "https://example.com/iphone.jpg",
+            "url": "https://example.com/iphone",
+            "priority": "high",
+            "notes": "I need this phone for work.",
+            "tags": [
+                "electronics",
+                "apple"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Gaming PC",
+            "description": "A powerful PC for gaming and video editing.",
+            "price": 2000,
+            "image": "https://example.com/gaming-pc.jpg",
+            "url": "https://example.com/gaming-pc",
+            "priority": "medium",
+            "notes": "I want to build this PC myself.",
+            "tags": [
+                "electronics",
+                "gaming"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Travel to Japan",
+            "description": "A trip to Japan to see the cherry blossoms.",
+            "price": 5000,
+            "image": "https://example.com/japan.jpg",
+            "url": "https://example.com/japan",
+            "priority": "low",
+            "notes": "I've always wanted to visit Japan.",
+            "tags": [
+                "travel",
+                "asia"
+            ]
+        }
+    ],
+    "collaborators": [
+        "alice@example.com",
+        "bob@example.com"
+    ]
+}

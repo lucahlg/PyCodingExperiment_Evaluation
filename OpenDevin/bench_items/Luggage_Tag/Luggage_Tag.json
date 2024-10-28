@@ -1,0 +1,18 @@
+{
+    "id": 123456789,
+    "passenger": {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "contact": "+1234567890"
+    },
+    "destination": {
+        "streetAddress": "123 Main Street",
+        "city": "Anytown",
+        "state": "CA",
+        "zipCode": "91234"
+    },
+    "tagColor": "blue",
+    "isFragile": false,
+    "description": "This is a fragile package that contains valuable items. Please handle with care.",
+    "image": "https://example.com/image.jpg"
+}

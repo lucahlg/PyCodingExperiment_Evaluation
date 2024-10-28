@@ -1,0 +1,10 @@
+{
+    "title": "My Awesome Poster",
+    "posterSize": "A2",
+    "artworkFile": {
+        "artworkType": "Vector",
+        "url": "https://example.com/my-awesome-poster.svg"
+    },
+    "designRequest": "Please use a bold and eye-catching design that will grab attention.",
+    "specialRequests": "Please make sure the poster is printed on high-quality paper."
+}

@@ -1,0 +1,23 @@
+{
+    "advertiser": {
+        "name": "Acme Corporation",
+        "address": "123 Main Street, Anytown, CA 12345",
+        "phone": "555-555-5555",
+        "email": "info@acmecorp.com"
+    },
+    "podcast": {
+        "title": "The Acme Podcast",
+        "description": "A weekly podcast about all things Acme Corporation.",
+        "category": "Business",
+        "artworkUrl": "https://acmecorp.com/podcast/artwork.jpg"
+    },
+    "agreement": {
+        "id": 12345,
+        "startDate": "2023-01-01",
+        "endDate": "2023-12-31",
+        "amount": 10000,
+        "paymentTerms": "Net 30",
+        "cancellationTerms": "Either party may cancel this agreement with 30 days' written notice."
+    },
+    "notes": "Please send all invoices to accountspayable@acmecorp.com."
+}

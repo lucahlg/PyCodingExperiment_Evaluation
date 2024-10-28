@@ -1,0 +1,50 @@
+{
+    "id": 1,
+    "name": "Patch Management System",
+    "description": "A system for managing and deploying software patches.",
+    "software": [
+        {
+            "id": 1,
+            "name": "Operating System",
+            "version": "10.0.19041",
+            "vendor": "Microsoft",
+            "patches": [
+                {
+                    "id": 1,
+                    "title": "Security Update for CVE-2021-31166",
+                    "description": "This update addresses a security vulnerability in the Windows kernel.",
+                    "severity": "critical",
+                    "product": "Windows 10",
+                    "status": "approved",
+                    "releaseDate": "2021-08-10T00:00:00Z"
+                },
+                {
+                    "id": 2,
+                    "title": "Cumulative Update for Windows 10 Version 20H2",
+                    "description": "This update includes improvements to the stability and performance of Windows 10.",
+                    "severity": "high",
+                    "product": "Windows 10",
+                    "status": "pending",
+                    "releaseDate": "2021-09-14T00:00:00Z"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Web Browser",
+            "version": "89.0.4389.114",
+            "vendor": "Google",
+            "patches": [
+                {
+                    "id": 3,
+                    "title": "Security Update for CVE-2021-30547",
+                    "description": "This update addresses a security vulnerability in the Web Browser.",
+                    "severity": "critical",
+                    "product": "Web Browser",
+                    "status": "approved",
+                    "releaseDate": "2021-07-20T00:00:00Z"
+                }
+            ]
+        }
+    ]
+}

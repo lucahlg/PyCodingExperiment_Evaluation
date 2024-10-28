@@ -1,0 +1,39 @@
+{
+    "items": [
+        {
+            "product": {
+                "id": 1,
+                "name": "Apple iPhone 13 Pro Max",
+                "description": "The latest and greatest iPhone from Apple, with a powerful A15 Bionic chip, a stunning 6.7-inch Super Retina XDR display, and a long-lasting battery.",
+                "price": 999.99
+            },
+            "quantity": 2
+        },
+        {
+            "product": {
+                "id": 2,
+                "name": "Samsung Galaxy S22 Ultra",
+                "description": "Samsung's top-of-the-line smartphone, with a powerful Snapdragon 8 Gen 1 processor, a gorgeous 6.8-inch Dynamic AMOLED 2X display, and a versatile quad-camera system.",
+                "price": 1199.99
+            },
+            "quantity": 1
+        }
+    ],
+    "subtotal": 2199.98,
+    "tax": 120.0,
+    "total": 2319.98,
+    "shippingAddress": {
+        "name": "John Smith",
+        "address": "123 Main Street",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "91234"
+    },
+    "billingAddress": {
+        "name": "Jane Doe",
+        "address": "456 Elm Street",
+        "city": "Somewhere",
+        "state": "NY",
+        "zip": "12345"
+    }
+}

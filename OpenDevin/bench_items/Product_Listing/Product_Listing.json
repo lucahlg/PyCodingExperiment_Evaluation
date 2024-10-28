@@ -1,0 +1,114 @@
+{
+    "listings": [
+        {
+            "id": "1",
+            "name": "Apple iPhone 13 Pro Max",
+            "description": "The latest and greatest iPhone from Apple, with a stunning 6.7-inch Super Retina XDR display, A15 Bionic chip, and a powerful camera system.",
+            "price": 999,
+            "currency": "USD",
+            "quantity": 50,
+            "images": [
+                "https://example.com/images/iphone-13-pro-max-1.jpg",
+                "https://example.com/images/iphone-13-pro-max-2.jpg",
+                "https://example.com/images/iphone-13-pro-max-3.jpg"
+            ],
+            "categories": [
+                "Smartphones",
+                "Apple",
+                "Electronics"
+            ],
+            "brand": "Apple",
+            "seller": {
+                "id": "1",
+                "name": "XYZ Electronics",
+                "address": {
+                    "street": "123 Main Street",
+                    "city": "Anytown",
+                    "state": "CA",
+                    "country": "USA",
+                    "zipCode": "12345"
+                },
+                "contact": {
+                    "email": "sales@example.com",
+                    "phone": "1-800-555-1212"
+                }
+            },
+            "shipping": {
+                "type": "standard",
+                "cost": 5,
+                "deliveryTime": "3-5 business days"
+            },
+            "reviews": [
+                {
+                    "id": "1",
+                    "author": "John Doe",
+                    "rating": 5,
+                    "comment": "This phone is amazing! The camera is incredible and the battery life is great.",
+                    "date": "2022-09-20T18:30:00Z"
+                },
+                {
+                    "id": "2",
+                    "author": "Jane Smith",
+                    "rating": 4,
+                    "comment": "I love this phone, but the screen is a bit too big for my taste.",
+                    "date": "2022-09-21T12:00:00Z"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Samsung Galaxy S22 Ultra",
+            "description": "The most powerful Galaxy smartphone yet, with a stunning 6.8-inch Dynamic AMOLED 2X display, Snapdragon 8 Gen 1 processor, and a versatile camera system.",
+            "price": 1199,
+            "currency": "USD",
+            "quantity": 25,
+            "images": [
+                "https://example.com/images/galaxy-s22-ultra-1.jpg",
+                "https://example.com/images/galaxy-s22-ultra-2.jpg",
+                "https://example.com/images/galaxy-s22-ultra-3.jpg"
+            ],
+            "categories": [
+                "Smartphones",
+                "Samsung",
+                "Electronics"
+            ],
+            "brand": "Samsung",
+            "seller": {
+                "id": "2",
+                "name": "ABC Electronics",
+                "address": {
+                    "street": "456 Elm Street",
+                    "city": "Anytown",
+                    "state": "CA",
+                    "country": "USA",
+                    "zipCode": "67890"
+                },
+                "contact": {
+                    "email": "sales@example.com",
+                    "phone": "1-800-555-2323"
+                }
+            },
+            "shipping": {
+                "type": "express",
+                "cost": 10,
+                "deliveryTime": "1-2 business days"
+            },
+            "reviews": [
+                {
+                    "id": "3",
+                    "author": "John Doe",
+                    "rating": 5,
+                    "comment": "This phone is amazing! The camera is incredible and the battery life is great.",
+                    "date": "2022-09-20T18:30:00Z"
+                },
+                {
+                    "id": "4",
+                    "author": "Jane Smith",
+                    "rating": 4,
+                    "comment": "I love this phone, but the screen is a bit too big for my taste.",
+                    "date": "2022-09-21T12:00:00Z"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "name": "my-backup",
+    "source": "projects/my-project/instances/my-instance",
+    "backupPolicy": {
+        "count": 3,
+        "expireDays": 14,
+        "retentionPeriodDays": 30
+    },
+    "exportOptions": {
+        "fileCompressionSource": "GCS",
+        "targetEncoding": "PLAIN_TEXT"
+    },
+    "dataLimit": 1073741824,
+    "description": "My backup schedule"
+}

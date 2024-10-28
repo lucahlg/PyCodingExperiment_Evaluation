@@ -1,0 +1,32 @@
+{
+    "consent": {
+        "id": "38400000-8cf0-11bd-b23e-10b96e4ef00d",
+        "participant": {
+            "id": "76500000-8cf0-11bd-b23e-10b96e4ef00d",
+            "name": "Jane Doe",
+            "dateOfBirth": "1980-01-01",
+            "gender": "female",
+            "contactInformation": {
+                "address": "123 Main Street, Anytown, CA 91234",
+                "phoneNumber": "555-123-4567",
+                "emailAddress": "jane.doe@example.com"
+            }
+        },
+        "study": {
+            "id": "12300000-8cf0-11bd-b23e-10b96e4ef00d",
+            "title": "A Study of the Effects of a New Drug on Cancer",
+            "sponsor": "Acme Pharmaceuticals",
+            "principalInvestigator": "Dr. John Smith",
+            "startDate": "2023-01-01",
+            "endDate": "2025-12-31",
+            "locations": [
+                "Anytown Hospital",
+                "Big City Medical Center"
+            ]
+        },
+        "date": "2023-03-08",
+        "signature": "Jane Doe",
+        "witnessSignature": "Mary Jones"
+    },
+    "additionalInformation": "The participant has been informed that the study involves taking a new drug that has not been approved by the FDA. The participant understands that there is a risk of side effects from the drug, including nausea, vomiting, and diarrhea."
+}

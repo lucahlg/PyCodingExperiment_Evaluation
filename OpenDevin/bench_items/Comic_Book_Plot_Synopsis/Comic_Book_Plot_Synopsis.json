@@ -1,0 +1,28 @@
+{
+    "title": "The Amazing Adventures of Captain Cosmos",
+    "description": "Captain Cosmos, a fearless space explorer, embarks on a thrilling journey to save the galaxy from the evil alien warlord, Commander Nebula.",
+    "characters": [
+        {
+            "name": "Captain Cosmos",
+            "description": "A brave and resourceful space explorer with superhuman strength and the ability to fly.",
+            "image": "https://example.com/images/captain_cosmos.jpg"
+        },
+        {
+            "name": "Commander Nebula",
+            "description": "A ruthless and cunning alien warlord with a powerful army and a thirst for galactic domination.",
+            "image": "https://example.com/images/commander_nebula.jpg"
+        }
+    ],
+    "teams": [],
+    "locations": [
+        {
+            "name": "Planet X",
+            "description": "A mysterious and dangerous planet located in a distant galaxy.",
+            "image": "https://example.com/images/planet_x.jpg"
+        }
+    ],
+    "events": [],
+    "objects": [],
+    "concepts": [],
+    "story_arcs": []
+}

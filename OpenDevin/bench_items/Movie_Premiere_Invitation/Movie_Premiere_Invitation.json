@@ -1,0 +1,35 @@
+{
+    "movieTitle": "The Lord of the Rings: The Return of the King",
+    "premiereDate": {
+        "year": 2003,
+        "month": 12,
+        "day": 17
+    },
+    "premiereTime": {
+        "hours": 19,
+        "minutes": 0
+    },
+    "location": {
+        "address": "123 Main Street",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90210"
+    },
+    "host": "Peter Jackson",
+    "guests": [
+        {
+            "name": "Elijah Wood",
+            "email": "elijahwood@example.com"
+        },
+        {
+            "name": "Ian McKellen",
+            "email": "ianmckellen@example.com"
+        },
+        {
+            "name": "Viggo Mortensen",
+            "email": "viggomortensen@example.com"
+        }
+    ],
+    "dressCode": "Formal",
+    "specialInstructions": "Please arrive on time."
+}

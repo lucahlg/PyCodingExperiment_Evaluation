@@ -1,0 +1,19 @@
+{
+    "author": {
+        "id": 1,
+        "name": "Jane Doe",
+        "bio": "Jane Doe is a software engineer and writer. She is passionate about helping people learn and grow.",
+        "image": "https://example.com/jane-doe.jpg"
+    },
+    "tip": {
+        "id": 1,
+        "title": "How to Write a Good Blog Post",
+        "authorId": 1,
+        "content": "1. Choose a topic that you are passionate about and that you know something about.\n2. Do your research and make sure you have all the facts straight.\n3. Write in a clear and concise style.\n4. Proofread your work carefully before you publish it.",
+        "tags": [
+            "writing",
+            "blogging",
+            "content marketing"
+        ]
+    }
+}

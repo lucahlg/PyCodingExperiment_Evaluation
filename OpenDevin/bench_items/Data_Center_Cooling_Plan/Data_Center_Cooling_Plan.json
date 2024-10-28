@@ -1,0 +1,26 @@
+{
+    "dataCenter": {
+        "name": "DC1",
+        "location": "Ashburn, VA"
+    },
+    "coolingSystem": {
+        "type": "CRAC",
+        "capacity": 100
+    },
+    "airflow": {
+        "cfm": 1000,
+        "pressure": 0.5
+    },
+    "temperature": "Cold Aisle",
+    "equipment": [
+        {
+            "type": "Server",
+            "quantity": 10
+        },
+        {
+            "type": "Storage",
+            "quantity": 5
+        }
+    ],
+    "notes": "This data center is used for production applications."
+}

@@ -1,0 +1,38 @@
+{
+    "alerts": [
+        {
+            "id": "1234567890",
+            "timestamp": "2023-03-08T18:30:00Z",
+            "severity": 8,
+            "source": "192.168.1.1",
+            "destination": "192.168.1.2",
+            "protocol": "TCP",
+            "description": "Port scan detected from 192.168.1.1 to 192.168.1.2 on port 80.",
+            "action": "Block traffic from 192.168.1.1 to 192.168.1.2 on port 80.",
+            "riskScore": 75,
+            "status": "new",
+            "assignedTo": "John Smith",
+            "comments": [
+                "Investigate the source IP address.",
+                "Update the firewall rules to block traffic from the source IP address."
+            ]
+        },
+        {
+            "id": "9876543210",
+            "timestamp": "2023-03-09T12:00:00Z",
+            "severity": 5,
+            "source": "10.0.0.1",
+            "destination": "10.0.0.2",
+            "protocol": "UDP",
+            "description": "SYN flood attack detected from 10.0.0.1 to 10.0.0.2.",
+            "action": "Enable SYN cookies on the firewall.",
+            "riskScore": 50,
+            "status": "in progress",
+            "assignedTo": "Jane Doe",
+            "comments": [
+                "Contact the network administrator of the source IP address.",
+                "Monitor the traffic to ensure that the attack has stopped."
+            ]
+        }
+    ]
+}

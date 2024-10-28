@@ -1,0 +1,17 @@
+{
+    "platform": "Twitter",
+    "timestamp": "2023-03-08T18:30:00Z",
+    "content": {
+        "text": "Check out my latest blog post on the importance of social media marketing! #socialmediamarketing #digitalmarketing",
+        "image": "https://example.com/image.jpg",
+        "link": "https://example.com/blog/social-media-marketing"
+    },
+    "likes": 100,
+    "comments": 20,
+    "shares": 50,
+    "author": {
+        "name": "Jane Doe",
+        "handle": "@janedoe",
+        "profile_image": "https://example.com/profile_image.jpg"
+    }
+}

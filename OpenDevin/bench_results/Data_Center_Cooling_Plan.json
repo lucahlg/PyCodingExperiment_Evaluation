@@ -1,0 +1,33 @@
+{
+    "dataCenter": {
+        "name": "DC1",
+        "location": "Ashburn, VA"
+    },
+    "coolingSystem": {
+        "type": "Air Handler",
+        "capacity": 150
+    },
+    "airflow": {
+        "cfm": 1200,
+        "pressure": 0.5
+    },
+    "temperature": "Cold Aisle",
+    "power": {
+        "source": "Grid",
+        "capacityWatts": 20000
+    },
+    "infrastructure": {
+        "equipment": [
+            {
+                "type": "Server",
+                "quantity": 10
+            },
+            {
+                "type": "Storage",
+                "quantity": 5
+            }
+        ],
+        "networkDevices": []
+    },
+    "notes": "This data center is used for production applications. Data center recently underwent maintenance."
+}

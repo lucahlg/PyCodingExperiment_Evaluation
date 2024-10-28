@@ -1,0 +1,15 @@
+{
+    "customer": {
+        "id": "02796e49-33a8-4c3f-87a8-57b33b2d4c74",
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "phone": "+15551234567"
+    },
+    "deletionDetails": {
+        "reason": "FRAUDULENT_ACTIVITY",
+        "description": "Customer was involved in a fraudulent transaction."
+    },
+    "deletedBy": "John Smith",
+    "deletionDate": "2023-03-08T14:30:00Z",
+    "notes": "The customer's account was deleted due to fraudulent activity. All transactions associated with the account have been reversed."
+}

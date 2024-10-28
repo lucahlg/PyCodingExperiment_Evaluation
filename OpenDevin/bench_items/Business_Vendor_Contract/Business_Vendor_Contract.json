@@ -1,0 +1,38 @@
+{
+    "contractNumber": "CN123456",
+    "contractDate": "2023-03-08",
+    "vendor": {
+        "name": "Acme Corporation",
+        "address": "123 Main Street, Anytown, CA 91234",
+        "contact": "John Smith"
+    },
+    "terms": {
+        "termType": "FIXED",
+        "startDate": "2023-03-09",
+        "endDate": "2024-03-08"
+    },
+    "products": [
+        {
+            "name": "Product A",
+            "description": "This is a great product.",
+            "unitPrice": {
+                "amount": 10.0,
+                "currency": "USD"
+            },
+            "quantity": 10
+        },
+        {
+            "name": "Product B",
+            "description": "This is another great product.",
+            "unitPrice": {
+                "amount": 20.0,
+                "currency": "USD"
+            },
+            "quantity": 5
+        }
+    ],
+    "totalContractValue": {
+        "amount": 250.0,
+        "currency": "USD"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "My Awesome Software",
+    "version": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+    },
+    "releaseDate": "2023-03-08",
+    "features": [
+        {
+            "name": "New Feature 1",
+            "description": "This is a brand new feature that will make your life easier."
+        },
+        {
+            "name": "Improved Feature 2",
+            "description": "We've made some improvements to an existing feature to make it even better."
+        }
+    ],
+    "bugFixes": [
+        {
+            "issueId": "ABC-123",
+            "description": "Fixed a bug that was causing the software to crash."
+        },
+        {
+            "issueId": "XYZ-987",
+            "description": "Fixed a bug that was causing the software to display incorrect data."
+        }
+    ],
+    "knownIssues": [
+        "There is a known issue with the software that can cause it to freeze under certain conditions. We are working on a fix for this issue."
+    ]
+}

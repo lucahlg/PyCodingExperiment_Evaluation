@@ -1,0 +1,60 @@
+{
+    "name": "Advanced Python Programming",
+    "description": "This course will teach you advanced Python programming techniques, including object-oriented programming, data structures, and algorithms.",
+    "location": {
+        "address": "123 Main Street",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345",
+        "room": "201"
+    },
+    "instructor": {
+        "name": "Jane Doe",
+        "bio": "Jane Doe is a software engineer with over 10 years of experience. She has worked for several startups and large companies, and she is passionate about teaching.",
+        "expertise": "Python, Java, C++",
+        "email": "jane.doe@example.com",
+        "phone": "123-456-7890"
+    },
+    "startDate": {
+        "month": "January",
+        "day": "1",
+        "year": "2023"
+    },
+    "endDate": {
+        "month": "March",
+        "day": "31",
+        "year": "2023"
+    },
+    "price": {
+        "amount": 1000,
+        "currency": "USD"
+    },
+    "maxAttendees": 20,
+    "registrationDeadline": {
+        "month": "December",
+        "day": "15",
+        "year": "2022"
+    },
+    "contactInfo": {
+        "name": "John Smith",
+        "email": "john.smith@example.com",
+        "phone": "123-456-7890"
+    },
+    "topicsCovered": [
+        "Object-oriented programming",
+        "Data structures",
+        "Algorithms",
+        "Unit testing",
+        "Deployment"
+    ],
+    "prerequisites": [
+        "Basic Python programming",
+        "Data structures and algorithms"
+    ],
+    "materialsProvided": [
+        "Course textbook",
+        "Lecture slides",
+        "Lab assignments"
+    ],
+    "cancellationPolicy": "Cancellations must be made at least 14 days before the start of the course to receive a full refund."
+}

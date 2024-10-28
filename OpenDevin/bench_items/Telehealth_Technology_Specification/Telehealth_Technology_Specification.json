@@ -1,0 +1,21 @@
+{
+    "name": "Telehealth Technology X",
+    "description": "A telehealth technology that provides high-quality video and audio conferencing.",
+    "mediaCodec": "H.264",
+    "audioCodec": "Opus",
+    "videoResolution": "1080p",
+    "networkProtocol": "TCP",
+    "securityProtocol": "TLS",
+    "additionalFeatures": [
+        "Screen sharing",
+        "File sharing",
+        "Text chat"
+    ],
+    "supportedPlatforms": [
+        "Windows",
+        "macOS",
+        "iOS",
+        "Android"
+    ],
+    "limitations": "Requires a high-speed internet connection."
+}

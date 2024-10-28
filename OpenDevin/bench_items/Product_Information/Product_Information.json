@@ -1,0 +1,103 @@
+{
+    "products": [
+        {
+            "id": "P001",
+            "name": "iPhone 13 Pro",
+            "description": "The latest and greatest iPhone from Apple, with a powerful A15 Bionic chip, a stunning Super Retina XDR display, and a pro-grade camera system.",
+            "price": 999.0,
+            "quantity": 50,
+            "brand": {
+                "id": "B001",
+                "name": "Apple"
+            },
+            "categories": [
+                {
+                    "id": "C001",
+                    "name": "Smartphones"
+                },
+                {
+                    "id": "C002",
+                    "name": "Electronics"
+                }
+            ],
+            "reviews": [
+                {
+                    "author": "John Smith",
+                    "rating": 5,
+                    "comment": "This phone is amazing! The camera is incredible, the battery life is great, and the performance is top-notch."
+                },
+                {
+                    "author": "Jane Doe",
+                    "rating": 4,
+                    "comment": "I love this phone, but the battery life could be better."
+                }
+            ]
+        },
+        {
+            "id": "P002",
+            "name": "Samsung Galaxy S22 Ultra",
+            "description": "The most powerful Galaxy smartphone yet, with a stunning Dynamic AMOLED 2X display, a pro-grade camera system, and a long-lasting battery.",
+            "price": 1199.0,
+            "quantity": 40,
+            "brand": {
+                "id": "B002",
+                "name": "Samsung"
+            },
+            "categories": [
+                {
+                    "id": "C001",
+                    "name": "Smartphones"
+                },
+                {
+                    "id": "C002",
+                    "name": "Electronics"
+                }
+            ],
+            "reviews": [
+                {
+                    "author": "Michael Jones",
+                    "rating": 5,
+                    "comment": "This phone is the best Android phone I've ever used. The camera is amazing, the battery life is great, and the performance is blazing fast."
+                },
+                {
+                    "author": "Sarah Miller",
+                    "rating": 4,
+                    "comment": "I love this phone, but it's a bit too big for my taste."
+                }
+            ]
+        },
+        {
+            "id": "P003",
+            "name": "Google Pixel 6 Pro",
+            "description": "The most advanced Pixel phone yet, with a stunning 6.7-inch OLED display, a powerful Tensor chip, and a pro-grade camera system.",
+            "price": 899.0,
+            "quantity": 30,
+            "brand": {
+                "id": "B003",
+                "name": "Google"
+            },
+            "categories": [
+                {
+                    "id": "C001",
+                    "name": "Smartphones"
+                },
+                {
+                    "id": "C002",
+                    "name": "Electronics"
+                }
+            ],
+            "reviews": [
+                {
+                    "author": "David Johnson",
+                    "rating": 5,
+                    "comment": "This phone is amazing! The camera is incredible, the battery life is great, and the performance is top-notch."
+                },
+                {
+                    "author": "Jessica Williams",
+                    "rating": 4,
+                    "comment": "I love this phone, but the software is a bit buggy."
+                }
+            ]
+        }
+    ]
+}

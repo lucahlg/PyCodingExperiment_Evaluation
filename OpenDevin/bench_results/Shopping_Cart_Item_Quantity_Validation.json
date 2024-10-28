@@ -1,0 +1,15 @@
+{
+    "items": [
+        {
+            "itemId": "item_1",
+            "quantity": 4,
+            "maxAllowedQuantity": 5
+        },
+        {
+            "itemId": "item_3",
+            "quantity": 3,
+            "maxAllowedQuantity": 8
+        }
+    ],
+    "maxItemsAllowed": 10
+}

@@ -1,0 +1,42 @@
+{
+    "id": "PO1234567890",
+    "supplier": {
+        "name": "Acme Corporation",
+        "address": "123 Main Street, Anytown, CA 12345",
+        "contact": {
+            "name": "John Smith",
+            "email": "john.smith@acmecorp.com",
+            "phone": "+1234567890"
+        }
+    },
+    "buyer": {
+        "name": "XYZ Company",
+        "address": "456 Elm Street, Anytown, CA 98765",
+        "contact": {
+            "name": "Jane Doe",
+            "email": "jane.doe@xyzcompany.com",
+            "phone": "+9876543210"
+        }
+    },
+    "material": {
+        "name": "Widget",
+        "description": "A small, plastic widget used in various applications.",
+        "unitOfMeasure": "EA"
+    },
+    "quantity": 100,
+    "unitPrice": {
+        "amount": 10.0,
+        "currency": "USD"
+    },
+    "startDate": "2023-03-08",
+    "duration": {
+        "value": 30,
+        "unit": "Day"
+    },
+    "paymentTerms": "Net 30",
+    "deliveryTerms": "FOB Destination",
+    "inspectionTerms": "Buyer's inspection at destination",
+    "warrantyTerms": "One year warranty against defects in materials and workmanship",
+    "governingLaw": "California",
+    "jurisdiction": "Los Angeles County"
+}

@@ -1,0 +1,9 @@
+{
+    "item": {
+        "itemId": "123456",
+        "quantity": 2
+    },
+    "cart": {
+        "cartId": "ABC123"
+    }
+}

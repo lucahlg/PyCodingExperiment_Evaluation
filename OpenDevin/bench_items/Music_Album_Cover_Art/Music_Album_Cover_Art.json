@@ -1,0 +1,22 @@
+{
+    "physicalForm": "Vinyl",
+    "releaseType": "Album",
+    "vinyl": {
+        "recordLabel": "Sub Pop Records",
+        "numDiscs": 2,
+        "rpm": 33,
+        "size": "12\"",
+        "artwork": {
+            "artist": {
+                "name": "Nirvana",
+                "age": 27
+            },
+            "title": "Nevermind",
+            "year": 1991,
+            "albumArt": {
+                "width": 300,
+                "height": 300
+            }
+        }
+    }
+}

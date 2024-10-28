@@ -1,0 +1,30 @@
+{
+    "name": "Summer Sale",
+    "type": "percentage",
+    "discount_amount": 20.0,
+    "start_date": "2023-06-01",
+    "end_date": "2023-08-31",
+    "description": "Enjoy 20% off all summer items.",
+    "items": [
+        {
+            "name": "Beach Towel",
+            "price": 10.0
+        },
+        {
+            "name": "Sunscreen",
+            "price": 15.0
+        },
+        {
+            "name": "Swimsuit",
+            "price": 20.0
+        }
+    ],
+    "categories": [
+        {
+            "name": "Beachwear"
+        },
+        {
+            "name": "Summer Essentials"
+        }
+    ]
+}

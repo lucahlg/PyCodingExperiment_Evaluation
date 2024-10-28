@@ -1,0 +1,35 @@
+{
+    "id": "faa09872-b68f-4891-9231-88931f73c1b1",
+    "name": "Production Line Configuration 1",
+    "productionLineTypeId": "ASSEMBLY_LINE",
+    "stationConfigurations": [
+        {
+            "id": "17c95099-5623-453d-8459-38b36f43ff2d",
+            "name": "Assembly Station 1",
+            "stationTypeId": "ASSEMBLY_STATION",
+            "inputMaterialIds": [
+                "35837b06-6f7c-44c6-95a4-53d5707e7faa",
+                "9ac45453-9c8f-4797-9b71-079c78ab302a"
+            ],
+            "outputMaterialId": "d86e4ca1-0335-4449-9a9e-47b2656f2c03"
+        },
+        {
+            "id": "a84c534e-6b37-4756-a098-0629042562be",
+            "name": "Inspection Station 1",
+            "stationTypeId": "INSPECTION_STATION",
+            "inputMaterialIds": [
+                "d86e4ca1-0335-4449-9a9e-47b2656f2c03"
+            ],
+            "outputMaterialId": "e96d9bdd-e6c0-468f-8087-8f46df9e4311"
+        },
+        {
+            "id": "426e125f-fbf0-46d9-9859-a2f06a6b8912",
+            "name": "Packaging Station 1",
+            "stationTypeId": "PACKAGING_STATION",
+            "inputMaterialIds": [
+                "e96d9bdd-e6c0-468f-8087-8f46df9e4311"
+            ],
+            "outputMaterialId": "86e601de-493a-49e2-bbdf-93340f2d0048"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "patient": {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "dateOfBirth": "1980-01-01",
+        "gender": "Female",
+        "contactInfo": {
+            "phoneNumber": "555-555-5555",
+            "email": "jane.doe@example.com"
+        }
+    },
+    "provider": {
+        "firstName": "John",
+        "lastName": "Smith",
+        "specialty": "Cardiology",
+        "contactInfo": {
+            "phoneNumber": "555-555-5556",
+            "email": "john.smith@example.com"
+        }
+    },
+    "appointmentType": "Checkup",
+    "startTime": "2023-03-08T09:00:00Z",
+    "endTime": "2023-03-08T10:00:00Z",
+    "notes": "Patient is experiencing chest pain."
+}

@@ -1,0 +1,21 @@
+{
+    "id": "PCC-12345",
+    "certificateNumber": "1234567890",
+    "certificateType": "certificate of conformity",
+    "productComplianceRequirements": [
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "OHSAS 18001:2007"
+    ],
+    "status": "active",
+    "issuedDate": "2023-03-08",
+    "expirationDate": "2025-03-07",
+    "issuingAuthority": "ACME Certification Services",
+    "testingLab": "SGS Laboratory",
+    "testReportNumber": "TR-1234567890",
+    "attachments": [
+        "https://example.com/certificate-of-conformity.pdf",
+        "https://example.com/test-report.pdf"
+    ],
+    "notes": "This certificate is valid for the following products: Product A, Product B, Product C."
+}

@@ -1,0 +1,25 @@
+{
+    "reservation_number": "RSVN1234567890",
+    "car": {
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2023
+    },
+    "customer": {
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "phone_number": "555-123-4567"
+    },
+    "rental_location": {
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "USA",
+        "address": "123 Main Street"
+    },
+    "start_date": "2023-08-15",
+    "end_date": "2023-08-22",
+    "rental_days": 7,
+    "total_cost": 350.0,
+    "insurance": true,
+    "additional_notes": "Please make sure the car is clean and has a full tank of gas."
+}

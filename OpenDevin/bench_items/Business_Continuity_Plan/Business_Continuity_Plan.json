@@ -1,0 +1,83 @@
+{
+    "planId": "00000000-0000-0000-0000-000000000000",
+    "planName": "Business Continuity Plan",
+    "planVersion": "1.0",
+    "planStatus": "Draft",
+    "planOwner": "John Smith",
+    "planCreationDate": "2023-03-08",
+    "planExpirationDate": "2024-03-08",
+    "planScope": "This plan covers all aspects of the business, including operations, IT, and finance.",
+    "planObjectives": [
+        "Ensure the continuity of critical business functions.",
+        "Minimize the impact of disruptions on customers and stakeholders.",
+        "Protect the company's reputation and brand."
+    ],
+    "planComponents": [
+        {
+            "componentId": "00000000-0000-0000-0000-000000000001",
+            "componentName": "Prevention",
+            "componentDescription": "This component focuses on preventing disruptions from occurring.",
+            "componentType": "Prevention",
+            "componentObjectives": [
+                "Identify and assess potential risks.",
+                "Implement controls to mitigate risks.",
+                "Conduct regular training and awareness programs."
+            ],
+            "componentActions": [
+                {
+                    "actionId": "00000000-0000-0000-0000-000000000002",
+                    "actionName": "Conduct a risk assessment.",
+                    "actionDescription": "This action will involve identifying and assessing potential risks to the business.",
+                    "actionType": "Preparatory",
+                    "actionPriority": "High",
+                    "actionOwner": "John Smith",
+                    "actionDueDate": "2023-04-08",
+                    "actionStatus": "Not Started"
+                },
+                {
+                    "actionId": "00000000-0000-0000-0000-000000000003",
+                    "actionName": "Implement security controls.",
+                    "actionDescription": "This action will involve implementing controls to mitigate risks to the business.",
+                    "actionType": "Preparatory",
+                    "actionPriority": "Medium",
+                    "actionOwner": "Jane Doe",
+                    "actionDueDate": "2023-05-08",
+                    "actionStatus": "In Progress"
+                }
+            ]
+        },
+        {
+            "componentId": "00000000-0000-0000-0000-000000000004",
+            "componentName": "Detection",
+            "componentDescription": "This component focuses on detecting disruptions as early as possible.",
+            "componentType": "Detection",
+            "componentObjectives": [
+                "Establish a monitoring system to detect disruptions.",
+                "Develop procedures for responding to disruptions.",
+                "Conduct regular testing of the monitoring system."
+            ],
+            "componentActions": [
+                {
+                    "actionId": "00000000-0000-0000-0000-000000000005",
+                    "actionName": "Establish a monitoring system.",
+                    "actionDescription": "This action will involve establishing a system to monitor for disruptions.",
+                    "actionType": "Preparatory",
+                    "actionPriority": "High",
+                    "actionOwner": "John Smith",
+                    "actionDueDate": "2023-06-08",
+                    "actionStatus": "Not Started"
+                },
+                {
+                    "actionId": "00000000-0000-0000-0000-000000000006",
+                    "actionName": "Develop procedures for responding to disruptions.",
+                    "actionDescription": "This action will involve developing procedures for responding to disruptions.",
+                    "actionType": "Preparatory",
+                    "actionPriority": "Medium",
+                    "actionOwner": "Jane Doe",
+                    "actionDueDate": "2023-07-08",
+                    "actionStatus": "In Progress"
+                }
+            ]
+        }
+    ]
+}

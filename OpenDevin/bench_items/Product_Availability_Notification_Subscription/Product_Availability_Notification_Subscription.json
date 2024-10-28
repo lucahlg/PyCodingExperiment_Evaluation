@@ -1,0 +1,8 @@
+{
+    "email": "jane.doe@example.com",
+    "productIds": [
+        "PROD1234",
+        "PROD5678"
+    ],
+    "deliveryPreference": "WEEKLY"
+}

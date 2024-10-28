@@ -1,0 +1,55 @@
+{
+    "name": "Server Room 1",
+    "description": "This is the main server room for the company.",
+    "devices": [
+        {
+            "name": "Server 1",
+            "manufacturer": "Dell",
+            "model": "PowerEdge R740",
+            "serialNumber": "1234567890",
+            "location": {
+                "room": "Server Room 1",
+                "row": 1,
+                "rack": 1,
+                "unit": 1,
+                "position": "Front"
+            },
+            "connectedPorts": [
+                "Ethernet1",
+                "Ethernet2",
+                "Ethernet3",
+                "Ethernet4"
+            ],
+            "customProperties": {
+                "Operating System": "Windows Server 2019",
+                "CPU": "Intel Xeon Gold 6248",
+                "Memory": "128GB DDR4"
+            }
+        },
+        {
+            "name": "Server 2",
+            "manufacturer": "HP",
+            "model": "ProLiant DL380 Gen10",
+            "serialNumber": "9876543210",
+            "location": {
+                "room": "Server Room 1",
+                "row": 1,
+                "rack": 1,
+                "unit": 2,
+                "position": "Front"
+            },
+            "connectedPorts": [
+                "Ethernet1",
+                "Ethernet2",
+                "Ethernet3",
+                "Ethernet4"
+            ],
+            "customProperties": {
+                "Operating System": "Red Hat Enterprise Linux 8",
+                "CPU": "AMD EPYC 7502",
+                "Memory": "256GB DDR4"
+            }
+        }
+    ],
+    "cabling": "All devices are connected using Cat6 Ethernet cables."
+}

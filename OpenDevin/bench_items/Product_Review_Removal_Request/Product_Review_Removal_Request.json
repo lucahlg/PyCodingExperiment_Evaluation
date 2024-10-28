@@ -1,0 +1,9 @@
+{
+    "productName": "Awesome Product",
+    "reviewId": "1234567890",
+    "reason": "The product is not as advertised.",
+    "supportingDocuments": [
+        "https://example.com/image1.jpg",
+        "https://example.com/image2.jpg"
+    ]
+}

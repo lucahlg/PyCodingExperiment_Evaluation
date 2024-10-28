@@ -1,0 +1,47 @@
+{
+    "dispositionPlanName": "Scrap Disposition Plan 2",
+    "description": "This plan details how scrap will be handled at the Anytown facility.",
+    "dispositionPlanType": "RECYCLE",
+    "dispositionPlanStatus": "ACTIVE",
+    "startDate": "2023-07-10",
+    "endDate": "2025-12-31",
+    "location": {
+        "name": "Anytown Facility",
+        "address": {
+            "streetAddress": "123 Main Street",
+            "city": "Anytown",
+            "state": "CA",
+            "zipCode": "12345"
+        }
+    },
+    "materials": [
+        {
+            "name": "Steel",
+            "description": "A type of metal."
+        },
+        {
+            "name": "Plastic",
+            "description": "A type of synthetic material."
+        }
+    ],
+    "processes": [
+        {
+            "name": "Recycling",
+            "description": "The process of converting waste materials into usable materials."
+        }
+    ],
+    "responsibleParties": [
+        {
+            "name": "ABC Company",
+            "contact": {
+                "name": "John Doe",
+                "email": "john.doe@example.com",
+                "phone": "555-123-4567"
+            }
+        }
+    ],
+    "createdAt": "2023-07-10T12:00:00Z",
+    "createdBy": "Jane Smith",
+    "updatedAt": "2023-07-10T12:00:00Z",
+    "updatedBy": "John Doe"
+}

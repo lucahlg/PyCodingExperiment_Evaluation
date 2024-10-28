@@ -1,0 +1,15 @@
+{
+    "id": 1,
+    "name": "Surgical Robot",
+    "description": "A robotic system designed to assist surgeons in performing minimally invasive surgical procedures.",
+    "category": "Surgical",
+    "manufacturer": "Intuitive Surgical",
+    "model": "da Vinci Xi",
+    "serialNumber": "SN123456789",
+    "quantity": 2,
+    "location": "Operating Room 3",
+    "status": "In Service",
+    "lastMaintenanceDate": "2023-03-08",
+    "nextMaintenanceDate": "2024-03-07",
+    "notes": "This surgical robot is used for a variety of procedures, including prostatectomies, hysterectomies, and cholecystectomies."
+}

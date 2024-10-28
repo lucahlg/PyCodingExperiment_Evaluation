@@ -1,0 +1,45 @@
+{
+    "title": "The Best of The Office Bloopers",
+    "series": {
+        "name": "The Office",
+        "id": "us-the-office",
+        "network": "NBC"
+    },
+    "season": 3,
+    "episode": 15,
+    "clips": [
+        {
+            "url": "https://www.youtube.com/watch?v=1",
+            "source": "YouTube",
+            "title": "Jim's Hilarious Prank on Dwight",
+            "description": "Jim pranks Dwight by putting his stapler in Jell-O."
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=2",
+            "source": "YouTube",
+            "title": "Michael's Epic Dance Moves",
+            "description": "Michael shows off his amazing dance moves at the office party."
+        }
+    ],
+    "cast": [
+        {
+            "name": "Steve Carell",
+            "role": "Michael Scott"
+        },
+        {
+            "name": "Rainn Wilson",
+            "role": "Dwight Schrute"
+        },
+        {
+            "name": "John Krasinski",
+            "role": "Jim Halpert"
+        }
+    ],
+    "tags": [
+        "comedy",
+        "bloopers",
+        "The Office"
+    ],
+    "rating": 4.5,
+    "viewCount": 100000
+}

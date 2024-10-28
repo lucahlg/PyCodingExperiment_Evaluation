@@ -1,0 +1,72 @@
+{
+    "id": "inst-p-1",
+    "name": "Procedure: How to Bake a Cake",
+    "description": "This procedure outlines the steps for baking a delicious and fluffy cake.",
+    "steps": [
+        {
+            "id": 1,
+            "description": "Preheat your oven to 350\u00b0F (175\u00b0C)."
+        },
+        {
+            "id": 2,
+            "description": "In a large bowl, combine 1 cup (2 sticks) of softened butter and 1 3/4 cups of granulated sugar.",
+            "images": [
+                "https://example.com/image-1.jpg"
+            ]
+        },
+        {
+            "id": 3,
+            "description": "Beat the mixture until light and fluffy, about 2 minutes.",
+            "videos": [
+                "https://example.com/video-1.mp4"
+            ]
+        },
+        {
+            "id": 4,
+            "description": "Add 3 eggs, one at a time, beating well after each addition."
+        },
+        {
+            "id": 5,
+            "description": "In a separate bowl, combine 2 1/4 cups of all-purpose flour, 1 teaspoon of baking powder, and 1/2 teaspoon of salt.",
+            "warnings": [
+                "Make sure the baking powder is fresh, as old baking powder can cause the cake to fall."
+            ]
+        },
+        {
+            "id": 6,
+            "description": "Gradually add the dry ingredients to the wet ingredients, mixing until just combined.",
+            "tips": [
+                "Do not overmix the batter, as this can make the cake tough."
+            ]
+        },
+        {
+            "id": 7,
+            "description": "Pour the batter into a greased and floured 9-inch round cake pan."
+        },
+        {
+            "id": 8,
+            "description": "Bake in the preheated oven for 30-35 minutes, or until a toothpick inserted into the center comes out clean."
+        },
+        {
+            "id": 9,
+            "description": "Let the cake cool completely before frosting."
+        }
+    ],
+    "safetyPrecautions": [
+        "Use caution when working with hot oven and sharp objects.",
+        "Ensure proper ventilation when using the oven to prevent the buildup of harmful fumes."
+    ],
+    "requiredTools": [
+        "Oven",
+        "Mixing bowls",
+        "Spatula",
+        "Whisk",
+        "Measuring cups and spoons",
+        "Cake pan"
+    ],
+    "estimatedTime": 60,
+    "difficultyLevel": "Easy",
+    "author": "Jane Doe",
+    "creationDate": "2023-02-14T18:30:00Z",
+    "lastUpdated": "2023-03-08T12:15:00Z"
+}

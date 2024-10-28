@@ -1,0 +1,56 @@
+{
+    "priceComparison": {
+        "products": [
+            {
+                "name": "iPhone 13 Pro Max",
+                "description": "The latest and greatest iPhone from Apple, with a powerful A15 Bionic chip, a stunning 6.7-inch Super Retina XDR display, and a pro-grade camera system.",
+                "price": 999.0,
+                "image": "https://store.apple.com/content/dam/apple/us/iphone/home/images/meta/iphone-13-pro-max_meta_og.png",
+                "link": "https://store.apple.com/buy-iphone/iphone-13-pro"
+            },
+            {
+                "name": "Samsung Galaxy S22 Ultra",
+                "description": "Samsung's most advanced smartphone yet, with a powerful Snapdragon 8 Gen 1 processor, a stunning 6.8-inch Dynamic AMOLED 2X display, and a pro-grade camera system.",
+                "price": 1199.0,
+                "image": "https://www.samsung.com/us/smartphones/galaxy-s22-ultra/buy/",
+                "link": "https://www.samsung.com/us/smartphones/galaxy-s22-ultra/buy/"
+            }
+        ],
+        "retailers": [
+            {
+                "name": "Amazon",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png",
+                "link": "https://www.amazon.com/"
+            },
+            {
+                "name": "Best Buy",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Best_Buy_logo.svg/1200px-Best_Buy_logo.svg.png",
+                "link": "https://www.bestbuy.com/"
+            }
+        ],
+        "prices": [
+            {
+                "product": "iPhone 13 Pro Max",
+                "retailer": "Amazon",
+                "price": 999.0
+            },
+            {
+                "product": "iPhone 13 Pro Max",
+                "retailer": "Best Buy",
+                "price": 999.0
+            },
+            {
+                "product": "Samsung Galaxy S22 Ultra",
+                "retailer": "Amazon",
+                "price": 1199.0
+            },
+            {
+                "product": "Samsung Galaxy S22 Ultra",
+                "retailer": "Best Buy",
+                "price": 1199.0
+            }
+        ],
+        "title": "iPhone 13 Pro Max vs Samsung Galaxy S22 Ultra: Price Comparison",
+        "description": "A comparison of the prices of the iPhone 13 Pro Max and the Samsung Galaxy S22 Ultra at two major retailers."
+    }
+}

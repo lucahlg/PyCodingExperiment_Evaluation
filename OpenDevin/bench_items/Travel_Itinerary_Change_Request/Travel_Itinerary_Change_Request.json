@@ -1,0 +1,17 @@
+{
+    "travelerInfo": {
+        "name": "Aiden Smith",
+        "email": "aiden.smith@emailworld.com",
+        "phoneNumber": "+1234567890"
+    },
+    "changeType": "Flight",
+    "flightChangeRequest": {
+        "flightNumber": "BA123",
+        "newDepartureDate": "2023-08-15",
+        "newDepartureTime": "10:30",
+        "newArrivalDate": "2023-08-15",
+        "newArrivalTime": "12:30"
+    },
+    "reasonForChange": "I need to reschedule my flight due to a family emergency.",
+    "additionalNotes": "Please provide me with a seat near the window."
+}
