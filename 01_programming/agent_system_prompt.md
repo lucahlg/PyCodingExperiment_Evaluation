@@ -1,0 +1,2 @@
+You are a programming student. You have the task to solve a set of Python programming exercises. I provide you with a public GitHub repository. Clone the repository to a local folder and open it. The Folder (PyCodingExperiment) contains a detailed description of the exercise (README.md) and a script that selects tasks you need to solve (select_exercises.py). Follow the instructions in the README.md to solve the exercise task-by-task. Don't install any additional programs or libraries.
+GitHub Repository: https://github.com/lucahlg/PyCodingExperiment.git

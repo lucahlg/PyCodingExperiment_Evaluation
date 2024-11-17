@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "1e549b2c-3114-4453-a783-00a6a2981df3",
+        "timestamp": "2024-11-11 13:09:04",
+        "seed": 3546566630545058278,
+        "exercise_count": 4,
+        "exercises": [
+            "1/high-scores",
+            "2/acronym",
+            "2/flatten-array",
+            "3/bowling"
+        ]
+    }
+]

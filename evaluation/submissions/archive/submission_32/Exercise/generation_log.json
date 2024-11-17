@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "380fb98a-de5e-4aaf-88db-26a176d9b87d",
+        "timestamp": "2024-11-11 14:11:46",
+        "seed": 2097452788700903787,
+        "exercise_count": 4,
+        "exercises": [
+            "1/rna-transcription",
+            "2/flatten-array",
+            "2/hexadecimal",
+            "3/simple-cipher"
+        ]
+    }
+]

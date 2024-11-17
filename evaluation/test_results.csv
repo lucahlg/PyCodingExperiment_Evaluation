@@ -1,5 +1,0 @@
-student_submission,task_number,task_name,unique_id,timestamp,seed,exercise_count,test_passed,tests_passed_percent,pylint_score,cyclomatic_complexity
-submission_01,01,high_scores,dc0474cd-af89-4db5-9406-4d23ddbc9006,2024-10-28 14:44:54,3224237497749888834,4,True,100.0,2.22,1.6
-submission_01,02,space_age,dc0474cd-af89-4db5-9406-4d23ddbc9006,2024-10-28 14:44:54,3224237497749888834,4,False,0.0,2.86,1.3333333333333333
-submission_01,03,luhn,dc0474cd-af89-4db5-9406-4d23ddbc9006,2024-10-28 14:44:54,3224237497749888834,4,True,100.0,6.88,4.0
-submission_01,04,kindergarten_garden,dc0474cd-af89-4db5-9406-4d23ddbc9006,2024-10-28 14:44:54,3224237497749888834,4,False,0.0,5.45,1.5

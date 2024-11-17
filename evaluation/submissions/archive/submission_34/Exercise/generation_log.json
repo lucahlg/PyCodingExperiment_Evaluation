@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "9023e5d2-ae14-47c2-a827-141a12ed9232",
+        "timestamp": "2024-11-11 14:20:52",
+        "seed": 2356440003778476213,
+        "exercise_count": 4,
+        "exercises": [
+            "1/accumulate",
+            "2/etl",
+            "2/acronym",
+            "3/bowling"
+        ]
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "2e4b792c-d1da-4771-a886-7ceb640989c6",
+        "timestamp": "2024-11-11 13:23:23",
+        "seed": 1901962485712147561,
+        "exercise_count": 4,
+        "exercises": [
+            "1/high-scores",
+            "2/space-age",
+            "2/acronym",
+            "3/binary-search"
+        ]
+    }
+]

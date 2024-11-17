@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "7efdae83-79dc-4d9d-851b-ac8bd78c08a0",
+        "timestamp": "2024-11-11 13:36:58",
+        "seed": 8271834554718223209,
+        "exercise_count": 4,
+        "exercises": [
+            "1/high-scores",
+            "2/allergies",
+            "2/acronym",
+            "3/simple-cipher"
+        ]
+    }
+]

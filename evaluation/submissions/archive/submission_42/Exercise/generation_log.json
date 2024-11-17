@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "b1456f8c-d512-403c-a3ee-caba4ed7c054",
+        "timestamp": "2024-11-11 15:19:38",
+        "seed": 5768849341440294754,
+        "exercise_count": 4,
+        "exercises": [
+            "1/rna-transcription",
+            "2/etl",
+            "2/hexadecimal",
+            "3/kindergarten-garden"
+        ]
+    }
+]

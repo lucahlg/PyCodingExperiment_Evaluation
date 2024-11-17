@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "4ec65dbe-e363-453f-8d62-c32beb0578d7",
+        "timestamp": "2024-11-11 12:35:15",
+        "seed": 8007152161684610639,
+        "exercise_count": 4,
+        "exercises": [
+            "1/gigasecond",
+            "2/flatten-array",
+            "2/etl",
+            "3/palindrome-products"
+        ]
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "f7e7fc57-6e5b-4b67-a71f-eef896940cef",
+        "timestamp": "2024-11-11 12:03:55",
+        "seed": 7328039391444833416,
+        "exercise_count": 4,
+        "exercises": [
+            "1/rna-transcription",
+            "2/etl",
+            "2/allergies",
+            "3/simple-cipher"
+        ]
+    }
+]

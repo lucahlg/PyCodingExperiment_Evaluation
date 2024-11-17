@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "4070dcf0-93ad-4209-b6f5-79d4b3236164",
+        "timestamp": "2024-11-11 12:21:09",
+        "seed": 6639435761705189401,
+        "exercise_count": 4,
+        "exercises": [
+            "1/gigasecond",
+            "2/flatten-array",
+            "2/hexadecimal",
+            "3/kindergarten-garden"
+        ]
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "8ef09fc7-ed5d-40cf-92a9-2326e8a12391",
+        "timestamp": "2024-11-11 13:47:50",
+        "seed": 7988273843198554102,
+        "exercise_count": 4,
+        "exercises": [
+            "1/high-scores",
+            "2/allergies",
+            "2/flatten-array",
+            "3/binary-search"
+        ]
+    }
+]

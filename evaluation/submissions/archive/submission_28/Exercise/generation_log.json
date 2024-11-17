@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "4e0aff69-5950-4a3f-992e-951c7215c52b",
+        "timestamp": "2024-11-11 13:51:24",
+        "seed": 5147831125941884374,
+        "exercise_count": 4,
+        "exercises": [
+            "1/raindrops",
+            "2/etl",
+            "2/isbn-verifier",
+            "3/kindergarten-garden"
+        ]
+    }
+]

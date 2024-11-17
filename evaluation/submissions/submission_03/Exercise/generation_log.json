@@ -1,0 +1,30 @@
+[
+    {
+        "unique_id": "OpenHands Agent with GPT4o-mini",
+        "timestamp": "2024-11-11 21:19:25",
+        "seed": "agent",
+        "exercise_count": 20,
+        "exercises": [
+            "accumulate",
+            "acronym",
+            "allergies",
+            "binary-search",
+            "bowling",
+            "etl",
+            "flatten-array",
+            "gigasecond",
+            "hexadecimal",
+            "high-scores",
+            "isbn-verifier",
+            "kindergarten-garden",
+            "luhn",
+            "palindrome-products",
+            "raindrops",
+            "rest-api",
+            "rna-transcription",
+            "simple-cipher",
+            "space-age",
+            "twelve-days"
+        ]
+    }
+]
