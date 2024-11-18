@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "142151d8-45ec-4054-a109-e9208a12582b",
+        "timestamp": "2024-11-18 12:23:39",
+        "seed": 7827744321825501285,
+        "exercise_count": 4,
+        "exercises": [
+            "1/accumulate",
+            "2/allergies",
+            "2/luhn",
+            "3/binary-search"
+        ]
+    }
+]

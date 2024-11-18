@@ -1,0 +1,14 @@
+[
+    {
+        "unique_id": "6e3a415a-aecd-4c3e-a0bd-493e607ff38b",
+        "timestamp": "2024-11-18 12:13:16",
+        "seed": 7041422187059053567,
+        "exercise_count": 4,
+        "exercises": [
+            "1/rna-transcription",
+            "2/acronym",
+            "2/space-age",
+            "3/palindrome-products"
+        ]
+    }
+]

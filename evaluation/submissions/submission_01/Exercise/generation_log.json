@@ -1,30 +1,14 @@
 [
     {
-        "unique_id": "OpenHands Agent with GPT4o-mini",
-        "timestamp": "2024-11-11 19:12:43",
-        "seed": "agent",
-        "exercise_count": 20,
+        "unique_id": "d5ba28f0-8290-40c6-ab30-f5dbb427b3c9",
+        "timestamp": "2024-11-18 12:08:48",
+        "seed": 8462810078954695743,
+        "exercise_count": 4,
         "exercises": [
-            "accumulate",
-            "acronym",
-            "allergies",
-            "binary-search",
-            "bowling",
-            "etl",
-            "flatten-array",
-            "gigasecond",
-            "hexadecimal",
-            "high-scores",
-            "isbn-verifier",
-            "kindergarten-garden",
-            "luhn",
-            "palindrome-products",
-            "raindrops",
-            "rest-api",
-            "rna-transcription",
-            "simple-cipher",
-            "space-age",
-            "twelve-days"
+            "1/gigasecond",
+            "2/hexadecimal",
+            "2/luhn",
+            "3/rest-api"
         ]
     }
 ]
