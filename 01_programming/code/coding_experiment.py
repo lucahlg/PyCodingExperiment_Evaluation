@@ -6,13 +6,13 @@ import json
 import datetime
 
 # Define the model name
-model_name = "GPT4o-mini"  # Replace with actual model name
+model_name = "gpt4o"  # Replace with actual model name
 
 # Define the selection mode: "random" or "sequential"
-selection_mode = "random"  # Change to "sequential" / "random" 
+selection_mode = "sequential"  # Change to "sequential" / "random" 
 
 # Define the number of iterations
-n = 5  # Change this to how many times you want to run it
+n = 20 # Change this to how many times you want to run it
 
 # Store the argument in a separate variable
 task_prompt = """

@@ -1,0 +1,375 @@
+EXECUTE
+import pandas as pd
+
+# Load the data
+data_path = 'wiki4he_data/wiki4HE.csv'
+data = pd.read_csv(data_path)
+
+# Display the first few rows of the dataset
+data.head()
+STDOUT/STDERR
+  AGE;GENDER;DOMAIN;PhD;YEARSEXP;UNIVERSITY;UOC_POSITION;OTHER_POSITION;OTHERSTATUS;USERWIKI;PU1;PU2;PU3;PEU1;PEU2;PEU3;ENJ1;ENJ2;Qu1;Qu2;Qu3;Qu4;Qu5;Vis1;Vis2;Vis3;Im1;Im2;Im3;SA1;SA2;SA3;Use1;Use2;Use3;Use4;Use5;Pf1;Pf2;Pf3;JR1;JR2;BI1;BI2;Inc1;Inc2;Inc3;Inc4;Exp1;Exp2;Exp3;Exp4;Exp5
+0  40;0;2;1;14;1;2;?;?;0;4;4;3;5;5;3;4;4;3;3;2;2;...                                                                                                                                                                                                                                          
+1  42;0;5;1;18;1;2;?;?;0;2;3;3;4;4;3;3;4;4;4;3;3;...                                                                                                                                                                                                                                          
+2  37;0;4;1;13;1;3;?;?;0;2;2;2;4;4;3;3;3;2;2;2;5;...                                                                                                                                                                                                                                          
+3  40;0;4;0;13;1;3;?;?;0;3;3;4;3;3;3;4;3;3;4;3;3;...                                                                                                                                                                                                                                          
+4  51;0;6;0;8;1;3;?;?;1;4;3;5;5;4;3;4;4;4;5;4;3;4...
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Load the data with the correct delimiter
+data = pd.read_csv(data_path, delimiter=';')
+
+# Display the first few rows of the dataset
+data.head()
+STDOUT/STDERR
+   AGE  GENDER DOMAIN  PhD YEARSEXP  UNIVERSITY UOC_POSITION OTHER_POSITION  \
+0   40       0      2    1       14           1            2              ?   
+1   42       0      5    1       18           1            2              ?   
+2   37       0      4    1       13           1            3              ?   
+3   40       0      4    0       13           1            3              ?   
+4   51       0      6    0        8           1            3              ?   
+
+  OTHERSTATUS USERWIKI  ... BI2 Inc1 Inc2 Inc3 Inc4 Exp1 Exp2 Exp3 Exp4 Exp5  
+0           ?        0  ...   3    5    5    5    5    4    4    4    1    2  
+1           ?        0  ...   2    4    4    3    4    2    2    4    2    4  
+2           ?        0  ...   1    5    3    5    5    2    2    2    1    3  
+3           ?        0  ...   3    3    4    4    3    4    4    3    3    4  
+4           ?        1  ...   5    5    5    4    4    5    5    5    4    4  
+
+[5 rows x 53 columns]
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set the style for the plots
+sns.set(style="whitegrid")
+
+# Overview of demographics
+demographics_summary = {
+    'Age': data['AGE'].describe(),
+    'Years of Experience': data['YEARSEXP'].describe(),
+    'Domain Count': data['DOMAIN'].value_counts(),
+    'Job Position Count': data['UOC_POSITION'].value_counts()
+}
+
+# Plotting Age distribution
+plt.figure(figsize=(12, 6))
+sns.histplot(data['AGE'], bins=10, kde=True)
+plt.title('Age Distribution of Respondents')
+plt.xlabel('Age')
+plt.ylabel('Frequency')
+plt.grid()
+plt.show()
+
+# Plotting Years of Experience distribution
+plt.figure(figsize=(12, 6))
+sns.histplot(data['YEARSEXP'], bins=10, kde=True)
+plt.title('Years of Experience Distribution of Respondents')
+plt.xlabel('Years of Experience')
+plt.ylabel('Frequency')
+plt.grid()
+plt.show()
+
+demographics_summary
+STDOUT/STDERR
+<Figure size 1200x600 with 1 Axes>
+image
+
+<Figure size 1200x600 with 1 Axes>
+image
+
+{'Age': count    913.000000
+ mean      42.246440
+ std        8.058418
+ min       23.000000
+ 25%       36.000000
+ 50%       42.000000
+ 75%       47.000000
+ max       69.000000
+ Name: AGE, dtype: float64,
+ 'Years of Experience': count     913
+ unique     37
+ top        10
+ freq       77
+ Name: YEARSEXP, dtype: object,
+ 'Domain Count': DOMAIN
+ 6    361
+ 1    183
+ 4    137
+ 5    101
+ 3     73
+ 2     56
+ ?      2
+ Name: count, dtype: int64,
+ 'Job Position Count': UOC_POSITION
+ 6    659
+ ?    113
+ 2     68
+ 3     50
+ 4     18
+ 1      3
+ 5      2
+ Name: count, dtype: int64}
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Plotting Domain Count
+plt.figure(figsize=(12, 6))
+sns.countplot(data=data, x='DOMAIN', order=data['DOMAIN'].value_counts().index)
+plt.title('Distribution of Domains among Respondents')
+plt.xlabel('Domain')
+plt.ylabel('Number of Respondents')
+plt.xticks(rotation=45)
+plt.grid()
+plt.show()
+
+# Plotting Job Position Count
+plt.figure(figsize=(12, 6))
+sns.countplot(data=data, x='UOC_POSITION', order=data['UOC_POSITION'].value_counts().index)
+plt.title('Distribution of Job Positions among Respondents')
+plt.xlabel('Job Position')
+plt.ylabel('Number of Respondents')
+plt.xticks(rotation=45)
+plt.grid()
+plt.show()
+STDOUT/STDERR
+<Figure size 1200x600 with 1 Axes>
+image
+
+<Figure size 1200x600 with 1 Axes>
+image
+
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Identifying Likert scale response columns
+likert_columns = [
+    'PU1', 'PU2', 'PU3', 'PEU1', 'PEU2', 'PEU3',
+    'ENJ1', 'ENJ2', 'Qu1', 'Qu2', 'Qu3', 'Qu4', 'Qu5',
+    'Vis1', 'Vis2', 'Vis3', 'Im1', 'Im2', 'Im3',
+    'SA1', 'SA2', 'SA3', 'Use1', 'Use2', 'Use3', 'Use4', 'Use5',
+    'Pf1', 'Pf2', 'Pf3', 'JR1', 'JR2', 'BI1', 'BI2',
+    'Inc1', 'Inc2', 'Inc3', 'Inc4', 'Exp1', 'Exp2', 'Exp3', 'Exp4', 'Exp5'
+]
+
+# Calculating the percentage of extreme responses (1 and 5) for each Likert scale question
+extreme_responses = data[likert_columns].apply(lambda x: (x == 1).sum() + (x == 5).sum(), axis=0) / len(data) * 100
+
+# Identifying questions with majority extreme responses (more than 50%)
+extreme_questions = extreme_responses[extreme_responses > 50]
+
+extreme_questions.sort_values(ascending=False)
+STDOUT/STDERR
+Series([], dtype: float64)
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Analyzing Wikipedia usage by domain
+# Assuming 'Use1' to 'Use5' represent the frequency of Wikipedia usage for issues related to their field of expertise
+usage_columns = ['Use1', 'Use2', 'Use3', 'Use4', 'Use5']
+
+# Calculating the average usage of Wikipedia by domain
+domain_usage = data.groupby('DOMAIN')[usage_columns].mean()
+
+# Calculating the average usage across all domains
+average_usage = domain_usage.mean(axis=1)
+
+# Adding the average usage to the domain_usage DataFrame
+domain_usage['Average Usage'] = average_usage
+
+# Sorting the domains by average usage
+sorted_domain_usage = domain_usage['Average Usage'].sort_values(ascending=False)
+
+sorted_domain_usage
+STDOUT/STDERR
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/groupby/groupby.py:1942, in GroupBy._agg_py_fallback(self, how, values, ndim, alt)
+   1941 try:
+-> 1942     res_values = self._grouper.agg_series(ser, alt, preserve_dtype=True)
+   1943 except Exception as err:
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/groupby/ops.py:864, in BaseGrouper.agg_series(self, obj, func, preserve_dtype)
+    862     preserve_dtype = True
+--> 864 result = self._aggregate_series_pure_python(obj, func)
+    866 npvalues = lib.maybe_convert_objects(result, try_float=False)
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/groupby/ops.py:885, in BaseGrouper._aggregate_series_pure_python(self, obj, func)
+    884 for i, group in enumerate(splitter):
+--> 885     res = func(group)
+    886     res = extract_result(res)
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/groupby/groupby.py:2454, in GroupBy.mean.<locals>.<lambda>(x)
+   2451 else:
+   2452     result = self._cython_agg_general(
+   2453         "mean",
+-> 2454         alt=lambda x: Series(x, copy=False).mean(numeric_only=numeric_only),
+   2455         numeric_only=numeric_only,
+   2456     )
+   2457     return result.__finalize__(self.obj, method="groupby")
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/series.py:6549, in Series.mean(self, axis, skipna, numeric_only, **kwargs)
+   6541 @doc(make_doc("mean", ndim=1))
+   6542 def mean(
+   6543     self,
+   (...)
+   6547     **kwargs,
+   6548 ):
+-> 6549     return NDFrame.mean(self, axis, skipna, numeric_only, **kwargs)
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/generic.py:12420, in NDFrame.mean(self, axis, skipna, numeric_only, **kwargs)
+  12413 def mean(
+  12414     self,
+  12415     axis: Axis | None = 0,
+   (...)
+  12418     **kwargs,
+  12419 ) -> Series | float:
+> 12420     return self._stat_function(
+  12421         "mean", nanops.nanmean, axis, skipna, numeric_only, **kwargs
+  12422     )
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/generic.py:12377, in NDFrame._stat_function(self, name, func, axis, skipna, numeric_only, **kwargs)
+  12375 validate_bool_kwarg(skipna, "skipna", none_allowed=False)
+> 12377 return self._reduce(
+  12378     func, name=name, axis=axis, skipna=skipna, numeric_only=numeric_only
+  12379 )
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/series.py:6457, in Series._reduce(self, op, name, axis, skipna, numeric_only, filter_type, **kwds)
+   6453     raise TypeError(
+   6454         f"Series.{name} does not allow {kwd_name}={numeric_only} "
+   6455         "with non-numeric dtypes."
+   6456     )
+-> 6457 return op(delegate, skipna=skipna, **kwds)
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/nanops.py:147, in bottleneck_switch.__call__.<locals>.f(values, axis, skipna, **kwds)
+    146 else:
+--> 147     result = alt(values, axis=axis, skipna=skipna, **kwds)
+    149 return result
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/nanops.py:404, in _datetimelike_compat.<locals>.new_func(values, axis, skipna, mask, **kwargs)
+    402     mask = isna(values)
+--> 404 result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+    406 if datetimelike:
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/nanops.py:720, in nanmean(values, axis, skipna, mask)
+    719 the_sum = values.sum(axis, dtype=dtype_sum)
+--> 720 the_sum = _ensure_numeric(the_sum)
+    722 if axis is not None and getattr(the_sum, "ndim", False):
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/nanops.py:1701, in _ensure_numeric(x)
+   1699 if isinstance(x, str):
+   1700     # GH#44008, GH#36703 avoid casting e.g. strings to numeric
+-> 1701     raise TypeError(f"Could not convert string '{x}' to numeric")
+   1702 try:
+
+TypeError: Could not convert string '12252141343313133421231413422142321213333133322432222213324313221313421?323432225131342322121533224112323314?11211211213113233222122113341111113114132?221321123111142?3112112241121122' to numeric
+
+The above exception was the direct cause of the following exception:
+
+TypeError                                 Traceback (most recent call last)
+Cell In[1], line 6
+      3 usage_columns = ['Use1', 'Use2', 'Use3', 'Use4', 'Use5']
+      5 # Calculating the average usage of Wikipedia by domain
+----> 6 domain_usage = data.groupby('DOMAIN')[usage_columns].mean()
+      8 # Calculating the average usage across all domains
+      9 average_usage = domain_usage.mean(axis=1)
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/groupby/groupby.py:2452, in GroupBy.mean(self, numeric_only, engine, engine_kwargs)
+   2445     return self._numba_agg_general(
+   2446         grouped_mean,
+   2447         executor.float_dtype_mapping,
+   2448         engine_kwargs,
+   2449         min_periods=0,
+   2450     )
+   2451 else:
+-> 2452     result = self._cython_agg_general(
+   2453         "mean",
+   2454         alt=lambda x: Series(x, copy=False).mean(numeric_only=numeric_only),
+   2455         numeric_only=numeric_only,
+   2456     )
+   2457     return result.__finalize__(self.obj, method="groupby")
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/groupby/groupby.py:1998, in GroupBy._cython_agg_general(self, how, alt, numeric_only, min_count, **kwargs)
+   1995     result = self._agg_py_fallback(how, values, ndim=data.ndim, alt=alt)
+   1996     return result
+-> 1998 new_mgr = data.grouped_reduce(array_func)
+   1999 res = self._wrap_agged_manager(new_mgr)
+   2000 if how in ["idxmin", "idxmax"]:
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/internals/managers.py:1469, in BlockManager.grouped_reduce(self, func)
+   1465 if blk.is_object:
+   1466     # split on object-dtype blocks bc some columns may raise
+   1467     #  while others do not.
+   1468     for sb in blk._split():
+-> 1469         applied = sb.apply(func)
+   1470         result_blocks = extend_blocks(applied, result_blocks)
+   1471 else:
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/internals/blocks.py:393, in Block.apply(self, func, **kwargs)
+    387 @final
+    388 def apply(self, func, **kwargs) -> list[Block]:
+    389     """
+    390     apply the function to my values; return a block if we are not
+    391     one
+    392     """
+--> 393     result = func(self.values, **kwargs)
+    395     result = maybe_coerce_values(result)
+    396     return self._split_op_result(result)
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/groupby/groupby.py:1995, in GroupBy._cython_agg_general.<locals>.array_func(values)
+   1992     return result
+   1994 assert alt is not None
+-> 1995 result = self._agg_py_fallback(how, values, ndim=data.ndim, alt=alt)
+   1996 return result
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/groupby/groupby.py:1946, in GroupBy._agg_py_fallback(self, how, values, ndim, alt)
+   1944     msg = f"agg function failed [how->{how},dtype->{ser.dtype}]"
+   1945     # preserve the kind of exception that raised
+-> 1946     raise type(err)(msg) from err
+   1948 if ser.dtype == object:
+   1949     res_values = res_values.astype(object, copy=False)
+
+TypeError: agg function failed [how->mean,dtype->object]
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Convert usage columns to numeric, forcing errors to NaN
+data[usage_columns] = data[usage_columns].apply(pd.to_numeric, errors='coerce')
+
+# Recalculating the average usage of Wikipedia by domain
+domain_usage = data.groupby('DOMAIN')[usage_columns].mean()
+
+# Calculating the average usage across all domains
+average_usage = domain_usage.mean(axis=1)
+
+# Adding the average usage to the domain_usage DataFrame
+domain_usage['Average Usage'] = average_usage
+
+# Sorting the domains by average usage
+sorted_domain_usage = domain_usage['Average Usage'].sort_values(ascending=False)
+
+sorted_domain_usage
+STDOUT/STDERR
+DOMAIN
+?    4.000000
+2    2.852097
+4    2.820382
+1    2.527571
+6    2.443994
+3    2.314372
+5    2.060449
+Name: Average Usage, dtype: float64
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Searching for keywords related to citations in the dataset
+search_terms = ['cite', 'citation', 'refer', 'reference']
+search_results = {term: data.filter(like=term).columns.tolist() for term in search_terms}
+search_results
+STDOUT/STDERR
+{'cite': [], 'citation': [], 'refer': [], 'reference': []}
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]

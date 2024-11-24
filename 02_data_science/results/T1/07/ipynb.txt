@@ -1,0 +1,284 @@
+EXECUTE
+%pip install pandas matplotlib seaborn
+STDOUT/STDERR
+Requirement already satisfied: pandas in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (2.2.3)
+Requirement already satisfied: matplotlib in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (3.9.2)
+Requirement already satisfied: seaborn in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (0.13.2)
+Requirement already satisfied: numpy>=1.26.0 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from pandas) (1.26.4)
+Requirement already satisfied: python-dateutil>=2.8.2 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from pandas) (2024.2)
+Requirement already satisfied: tzdata>=2022.7 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from pandas) (2024.2)
+Requirement already satisfied: contourpy>=1.0.1 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from matplotlib) (1.3.0)
+Requirement already satisfied: cycler>=0.10 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from matplotlib) (4.54.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from matplotlib) (1.4.7)
+Requirement already satisfied: packaging>=20.0 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from matplotlib) (24.1)
+Requirement already satisfied: pillow>=8 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from matplotlib) (10.4.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from matplotlib) (3.2.0)
+Requirement already satisfied: six>=1.5 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)
+
+[notice] A new release of pip is available: 24.2 -> 24.3.1
+[notice] To update, run: pip install --upgrade pip
+Note: you may need to restart the kernel to use updated packages.
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+import pandas as pd
+
+# Load the data
+data_path = 'wiki4he_data/wiki4HE.csv'
+data = pd.read_csv(data_path)
+
+# Display the first few rows of the dataset
+data.head()
+STDOUT/STDERR
+  AGE;GENDER;DOMAIN;PhD;YEARSEXP;UNIVERSITY;UOC_POSITION;OTHER_POSITION;OTHERSTATUS;USERWIKI;PU1;PU2;PU3;PEU1;PEU2;PEU3;ENJ1;ENJ2;Qu1;Qu2;Qu3;Qu4;Qu5;Vis1;Vis2;Vis3;Im1;Im2;Im3;SA1;SA2;SA3;Use1;Use2;Use3;Use4;Use5;Pf1;Pf2;Pf3;JR1;JR2;BI1;BI2;Inc1;Inc2;Inc3;Inc4;Exp1;Exp2;Exp3;Exp4;Exp5
+0  40;0;2;1;14;1;2;?;?;0;4;4;3;5;5;3;4;4;3;3;2;2;...                                                                                                                                                                                                                                          
+1  42;0;5;1;18;1;2;?;?;0;2;3;3;4;4;3;3;4;4;4;3;3;...                                                                                                                                                                                                                                          
+2  37;0;4;1;13;1;3;?;?;0;2;2;2;4;4;3;3;3;2;2;2;5;...                                                                                                                                                                                                                                          
+3  40;0;4;0;13;1;3;?;?;0;3;3;4;3;3;3;4;3;3;4;3;3;...                                                                                                                                                                                                                                          
+4  51;0;6;0;8;1;3;?;?;1;4;3;5;5;4;3;4;4;4;5;4;3;4...
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Load the data with the correct delimiter
+data = pd.read_csv(data_path, delimiter=';')
+
+# Display the first few rows of the dataset
+data.head()
+STDOUT/STDERR
+   AGE  GENDER DOMAIN  PhD YEARSEXP  UNIVERSITY UOC_POSITION OTHER_POSITION  \
+0   40       0      2    1       14           1            2              ?   
+1   42       0      5    1       18           1            2              ?   
+2   37       0      4    1       13           1            3              ?   
+3   40       0      4    0       13           1            3              ?   
+4   51       0      6    0        8           1            3              ?   
+
+  OTHERSTATUS USERWIKI  ... BI2 Inc1 Inc2 Inc3 Inc4 Exp1 Exp2 Exp3 Exp4 Exp5  
+0           ?        0  ...   3    5    5    5    5    4    4    4    1    2  
+1           ?        0  ...   2    4    4    3    4    2    2    4    2    4  
+2           ?        0  ...   1    5    3    5    5    2    2    2    1    3  
+3           ?        0  ...   3    3    4    4    3    4    4    3    3    4  
+4           ?        1  ...   5    5    5    4    4    5    5    5    4    4  
+
+[5 rows x 53 columns]
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set the style for the plots
+sns.set(style="whitegrid")
+
+# Overview of demographics
+demographics_summary = {
+    'Age': data['AGE'].describe(),
+    'Years of Experience': data['YEARSEXP'].describe(),
+    'Domain Count': data['DOMAIN'].value_counts(),
+    'Job Position Count': data['UOC_POSITION'].value_counts()
+}
+
+# Plotting Age Distribution
+plt.figure(figsize=(12, 6))
+sns.histplot(data['AGE'], bins=10, kde=True)
+plt.title('Age Distribution of Respondents')
+plt.xlabel('Age')
+plt.ylabel('Frequency')
+plt.grid()
+plt.show()
+
+# Plotting Years of Experience Distribution
+plt.figure(figsize=(12, 6))
+sns.histplot(data['YEARSEXP'], bins=10, kde=True)
+plt.title('Years of Experience Distribution of Respondents')
+plt.xlabel('Years of Experience')
+plt.ylabel('Frequency')
+plt.grid()
+plt.show()
+
+demographics_summary
+STDOUT/STDERR
+<Figure size 1200x600 with 1 Axes>
+image
+
+<Figure size 1200x600 with 1 Axes>
+image
+
+{'Age': count    913.000000
+ mean      42.246440
+ std        8.058418
+ min       23.000000
+ 25%       36.000000
+ 50%       42.000000
+ 75%       47.000000
+ max       69.000000
+ Name: AGE, dtype: float64,
+ 'Years of Experience': count     913
+ unique     37
+ top        10
+ freq       77
+ Name: YEARSEXP, dtype: object,
+ 'Domain Count': DOMAIN
+ 6    361
+ 1    183
+ 4    137
+ 5    101
+ 3     73
+ 2     56
+ ?      2
+ Name: count, dtype: int64,
+ 'Job Position Count': UOC_POSITION
+ 6    659
+ ?    113
+ 2     68
+ 3     50
+ 4     18
+ 1      3
+ 5      2
+ Name: count, dtype: int64}
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Identify Likert scale response columns (assuming they start from 'PU1' to 'SA3' based on the dataset structure)
+likert_columns = [
+    'PU1', 'PU2', 'PU3', 'PEU1', 'PEU2', 'PEU3',
+    'ENJ1', 'ENJ2', 'Qu1', 'Qu2', 'Qu3', 'Qu4', 'Qu5',
+    'Vis1', 'Vis2', 'Vis3', 'Im1', 'Im2', 'Im3',
+    'SA1', 'SA2', 'SA3', 'Use1', 'Use2', 'Use3', 'Use4', 'Use5',
+    'Pf1', 'Pf2', 'Pf3', 'JR1', 'JR2', 'BI1', 'BI2',
+    'Inc1', 'Inc2', 'Inc3', 'Inc4', 'Exp1', 'Exp2', 'Exp3', 'Exp4', 'Exp5'
+]
+
+# Calculate the percentage of extreme responses (1 or 5) for each question
+extreme_responses = data[likert_columns].apply(lambda x: (x.isin([1, 5]).sum() / len(x)) * 100)
+
+# Filter questions with more than 50% extreme responses
+extreme_questions = extreme_responses[extreme_responses > 50]
+
+extreme_questions
+STDOUT/STDERR
+Series([], dtype: float64)
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Group by DOMAIN and calculate the percentage of users who consult Wikipedia
+domain_wiki_usage = data.groupby('DOMAIN')['USERWIKI'].value_counts(normalize=True).unstack().fillna(0) * 100
+
+# Extract the percentage of users who consult Wikipedia (USERWIKI = 1)
+domain_wiki_usage = domain_wiki_usage[1]
+
+# Plotting the results
+plt.figure(figsize=(12, 6))
+domain_wiki_usage.sort_values().plot(kind='barh', color='skyblue')
+plt.title('Percentage of Respondents Consulting Wikipedia by Domain')
+plt.xlabel('Percentage of Users Consulting Wikipedia')
+plt.ylabel('Domain')
+plt.grid(axis='x')
+plt.show()
+
+# Display the domain usage data
+domain_wiki_usage
+STDOUT/STDERR
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py:3805, in Index.get_loc(self, key)
+   3804 try:
+-> 3805     return self._engine.get_loc(casted_key)
+   3806 except KeyError as err:
+
+File index.pyx:167, in pandas._libs.index.IndexEngine.get_loc()
+
+File index.pyx:196, in pandas._libs.index.IndexEngine.get_loc()
+
+File pandas/_libs/hashtable_class_helper.pxi:7081, in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+File pandas/_libs/hashtable_class_helper.pxi:7089, in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+KeyError: 1
+
+The above exception was the direct cause of the following exception:
+
+KeyError                                  Traceback (most recent call last)
+Cell In[1], line 5
+      2 domain_wiki_usage = data.groupby('DOMAIN')['USERWIKI'].value_counts(normalize=True).unstack().fillna(0) * 100
+      4 # Extract the percentage of users who consult Wikipedia (USERWIKI = 1)
+----> 5 domain_wiki_usage = domain_wiki_usage[1]
+      7 # Plotting the results
+      8 plt.figure(figsize=(12, 6))
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/frame.py:4102, in DataFrame.__getitem__(self, key)
+   4100 if self.columns.nlevels > 1:
+   4101     return self._getitem_multilevel(key)
+-> 4102 indexer = self.columns.get_loc(key)
+   4103 if is_integer(indexer):
+   4104     indexer = [indexer]
+
+File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py:3812, in Index.get_loc(self, key)
+   3807     if isinstance(casted_key, slice) or (
+   3808         isinstance(casted_key, abc.Iterable)
+   3809         and any(isinstance(x, slice) for x in casted_key)
+   3810     ):
+   3811         raise InvalidIndexError(key)
+-> 3812     raise KeyError(key) from err
+   3813 except TypeError:
+   3814     # If we have a listlike key, _check_indexing_error will raise
+   3815     #  InvalidIndexError. Otherwise we fall through and re-raise
+   3816     #  the TypeError.
+   3817     self._check_indexing_error(key)
+
+KeyError: 1
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Check the unique values in the USERWIKI column
+unique_userwiki_values = data['USERWIKI'].unique()
+unique_userwiki_values
+STDOUT/STDERR
+array(['0', '1', '?'], dtype=object)
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Convert USERWIKI to numeric, replacing '?' with NaN
+data['USERWIKI'] = pd.to_numeric(data['USERWIKI'], errors='coerce')
+
+# Group by DOMAIN and calculate the percentage of users who consult Wikipedia
+domain_wiki_usage = data.groupby('DOMAIN')['USERWIKI'].value_counts(normalize=True).unstack().fillna(0) * 100
+
+# Extract the percentage of users who consult Wikipedia (USERWIKI = 1)
+domain_wiki_usage = domain_wiki_usage[1]
+
+# Plotting the results
+plt.figure(figsize=(12, 6))
+domain_wiki_usage.sort_values().plot(kind='barh', color='skyblue')
+plt.title('Percentage of Respondents Consulting Wikipedia by Domain')
+plt.xlabel('Percentage of Users Consulting Wikipedia')
+plt.ylabel('Domain')
+plt.grid(axis='x')
+plt.show()
+
+# Display the domain usage data
+domain_wiki_usage
+STDOUT/STDERR
+<Figure size 1200x600 with 1 Axes>
+image
+
+DOMAIN
+1    15.300546
+2     3.636364
+3    12.500000
+4    19.117647
+5    10.891089
+6    13.611111
+?     0.000000
+Name: 1.0, dtype: float64
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Search for columns related to citation practices in the dataset
+citation_columns = [col for col in data.columns if 'cite' in col.lower() or 'reference' in col.lower() or 'citation' in col.lower()]
+citation_columns
+STDOUT/STDERR
+[]
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
