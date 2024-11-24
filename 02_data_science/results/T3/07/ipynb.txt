@@ -1,0 +1,240 @@
+EXECUTE
+import pandas as pd
+import zipfile
+import requests
+import os
+
+# Download the dataset
+url = "https://archive.ics.uci.edu/static/public/292/wholesale+customers.zip"
+response = requests.get(url)
+
+# Save the zip file
+zip_file_path = "wholesale_customers.zip"
+with open(zip_file_path, "wb") as f:
+    f.write(response.content)
+
+# Extract the zip file
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    zip_ref.extractall(".")
+
+# Load the dataset into a DataFrame
+data = pd.read_csv("Wholesale customers data.csv")
+
+# Drop the Region column
+data = data.drop(columns=["Region"])
+data.head()
+STDOUT/STDERR
+   Channel  Fresh  Milk  Grocery  Frozen  Detergents_Paper  Delicassen
+0        2  12669  9656     7561     214              2674        1338
+1        2   7057  9810     9568    1762              3293        1776
+2        2   6353  8808     7684    2405              3516        7844
+3        1  13265  1196     4221    6404               507        1788
+4        2  22615  5410     7198    3915              1777        5185
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Filter the data for clients that are restaurants, hotels, and cafés (Channel 2)
+filtered_data = data[data['Channel'] == 2]
+filtered_data.head()
+STDOUT/STDERR
+   Channel  Fresh  Milk  Grocery  Frozen  Detergents_Paper  Delicassen
+0        2  12669  9656     7561     214              2674        1338
+1        2   7057  9810     9568    1762              3293        1776
+2        2   6353  8808     7684    2405              3516        7844
+4        2  22615  5410     7198    3915              1777        5185
+5        2   9413  8259     5126     666              1795        1451
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Normalize the data by computing the proportionate spending per product category
+normalized_data = filtered_data.copy()
+normalized_data.iloc[:, 1:] = normalized_data.iloc[:, 1:].div(normalized_data.iloc[:, 1:].sum(axis=1), axis=0)
+
+normalized_data.head()
+STDOUT/STDERR
+   Channel     Fresh      Milk   Grocery    Frozen  Detergents_Paper  \
+0        2  0.371394  0.283068  0.221652  0.006273          0.078389   
+1        2  0.212139  0.294896  0.287621  0.052967          0.098990   
+2        2  0.173532  0.240590  0.209888  0.065692          0.096039   
+4        2  0.490564  0.117354  0.156139  0.084924          0.038547   
+5        2  0.352415  0.309210  0.191913  0.024934          0.067203   
+
+   Delicassen  
+0    0.039224  
+1    0.053388  
+2    0.214258  
+4    0.112473  
+5    0.054324
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+from sklearn.preprocessing import StandardScaler
+
+# Standardize the data
+scaler = StandardScaler()
+standardized_data = normalized_data.copy()
+standardized_data.iloc[:, 1:] = scaler.fit_transform(normalized_data.iloc[:, 1:])
+
+standardized_data.head()
+STDOUT/STDERR
+---------------------------------------------------------------------------
+ModuleNotFoundError                       Traceback (most recent call last)
+Cell In[1], line 1
+----> 1 from sklearn.preprocessing import StandardScaler
+      3 # Standardize the data
+      4 scaler = StandardScaler()
+
+ModuleNotFoundError: No module named 'sklearn'
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+%pip install scikit-learn
+STDOUT/STDERR
+Collecting scikit-learn
+  Downloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+Requirement already satisfied: numpy>=1.19.5 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from scikit-learn) (1.26.4)
+Requirement already satisfied: scipy>=1.6.0 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from scikit-learn) (1.14.1)
+Requirement already satisfied: joblib>=1.2.0 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from scikit-learn) (1.4.2)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+  Downloading threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+Downloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/12.9 MB ? eta -:--:--
+[2K   ━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.8/12.9 MB 5.4 MB/s eta 0:00:03
+[2K   ━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/12.9 MB 6.0 MB/s eta 0:00:02
+[2K   ━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/12.9 MB 6.2 MB/s eta 0:00:02
+[2K   ━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/12.9 MB 6.2 MB/s eta 0:00:02
+[2K   ━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━ 5.8/12.9 MB 6.3 MB/s eta 0:00:02
+[2K   ━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━ 7.1/12.9 MB 6.3 MB/s eta 0:00:01
+[2K   ━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━ 8.4/12.9 MB 6.3 MB/s eta 0:00:01
+[2K   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 9.7/12.9 MB 6.3 MB/s eta 0:00:01
+[2K   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━ 11.0/12.9 MB 6.3 MB/s eta 0:00:01
+[2K   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━ 12.1/12.9 MB 6.3 MB/s eta 0:00:01
+[2K   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.9/12.9 MB 6.2 MB/s eta 0:00:00
+[?25hDownloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Installing collected packages: threadpoolctl, scikit-learn
+Successfully installed scikit-learn-1.5.2 threadpoolctl-3.5.0
+
+[notice] A new release of pip is available: 24.2 -> 24.3.1
+[notice] To update, run: pip install --upgrade pip
+Note: you may need to restart the kernel to use updated packages.
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Standardize the data
+scaler = StandardScaler()
+standardized_data.iloc[:, 1:] = scaler.fit_transform(normalized_data.iloc[:, 1:])
+
+standardized_data.head()
+STDOUT/STDERR
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[1], line 2
+      1 # Standardize the data
+----> 2 scaler = StandardScaler()
+      3 standardized_data.iloc[:, 1:] = scaler.fit_transform(normalized_data.iloc[:, 1:])
+      5 standardized_data.head()
+
+NameError: name 'StandardScaler' is not defined
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+# Re-load the filtered and normalized data
+data = pd.read_csv("Wholesale customers data.csv")
+filtered_data = data[data['Channel'] == 2]
+normalized_data = filtered_data.copy()
+normalized_data.iloc[:, 1:] = normalized_data.iloc[:, 1:].div(normalized_data.iloc[:, 1:].sum(axis=1), axis=0)
+
+# Standardize the data
+scaler = StandardScaler()
+standardized_data = normalized_data.copy()
+standardized_data.iloc[:, 1:] = scaler.fit_transform(normalized_data.iloc[:, 1:])
+
+standardized_data.head()
+STDOUT/STDERR
+   Channel    Region     Fresh      Milk   Grocery    Frozen  \
+0        2  0.538196  0.979742  0.701086 -1.109726 -0.696610   
+1        2  0.604034  0.074502  0.835646 -0.528898  0.268893   
+2        2  0.361549 -0.144936  0.217842 -1.213295  0.532034   
+4        2 -0.135040  1.657187 -1.184187 -1.686519  0.929728   
+5        2  1.255620  0.871811  0.998420 -1.371610 -0.310759   
+
+   Detergents_Paper  Delicassen  
+0         -1.049193   -0.008555  
+1         -0.757016    0.394224  
+2         -0.798853    4.968916  
+4         -1.614250    2.074493  
+5         -1.207857    0.420818
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+from sklearn.cluster import KMeans
+
+# Perform K-means clustering
+kmeans = KMeans(n_clusters=4, random_state=42)
+standardized_data['Cluster'] = kmeans.fit_predict(standardized_data.iloc[:, 1:])
+
+standardized_data.head()
+STDOUT/STDERR
+   Channel    Region     Fresh      Milk   Grocery    Frozen  \
+0        2  0.538196  0.979742  0.701086 -1.109726 -0.696610   
+1        2  0.604034  0.074502  0.835646 -0.528898  0.268893   
+2        2  0.361549 -0.144936  0.217842 -1.213295  0.532034   
+4        2 -0.135040  1.657187 -1.184187 -1.686519  0.929728   
+5        2  1.255620  0.871811  0.998420 -1.371610 -0.310759   
+
+   Detergents_Paper  Delicassen  Cluster  
+0         -1.049193   -0.008555        1  
+1         -0.757016    0.394224        0  
+2         -0.798853    4.968916        1  
+4         -1.614250    2.074493        1  
+5         -1.207857    0.420818        1
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+import matplotlib.pyplot as plt
+
+# Get the cluster centroids
+centroids = kmeans.cluster_centers_
+
+# Create a DataFrame for centroids
+centroids_df = pd.DataFrame(centroids, columns=standardized_data.columns[1:-1])
+centroids_df.index = [f'Cluster {i}' for i in range(centroids_df.shape[0])]
+
+# Plot the centroids
+centroids_df.plot(kind='bar', figsize=(12, 6))
+plt.title('Cluster Centroids')
+plt.ylabel('Standardized Spending')
+plt.xlabel('Clusters')
+plt.xticks(rotation=0)
+plt.legend(title='Product Categories')
+plt.show()
+STDOUT/STDERR
+<Figure size 1200x600 with 1 Axes>
+image
+
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Analyze the spending patterns for each cluster
+cluster_descriptions = standardized_data.groupby('Cluster').mean()
+
+cluster_descriptions
+STDOUT/STDERR
+         Channel    Region     Fresh      Milk   Grocery    Frozen  \
+Cluster                                                              
+0            2.0  0.315753 -0.543431  0.754475  0.190749 -0.084137   
+1            2.0  0.310700  1.212234 -0.590493 -0.958158 -0.006293   
+2            2.0 -0.644460 -0.676181 -0.178484  0.889786 -0.326305   
+3            2.0 -0.515612  0.863128 -1.205432 -1.457508  4.649751   
+
+         Detergents_Paper  Delicassen  
+Cluster                                
+0                0.079353    0.173075  
+1               -0.845587    0.209774  
+2                0.939896   -0.479995  
+3               -1.814178    0.645723
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
