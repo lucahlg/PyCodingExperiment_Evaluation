@@ -1,14 +1,8 @@
 EXECUTE
-%pip install pandas matplotlib seaborn
-import pandas as pd
-
-# Load the data
-data = pd.read_csv('wiki4he/wiki4HE.csv')
-data.head()
+%pip install pandas matplotlib
 STDOUT/STDERR
 Requirement already satisfied: pandas in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (2.2.3)
 Requirement already satisfied: matplotlib in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (3.9.2)
-Requirement already satisfied: seaborn in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (0.13.2)
 Requirement already satisfied: numpy>=1.26.0 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from pandas) (1.26.4)
 Requirement already satisfied: python-dateutil>=2.8.2 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
 Requirement already satisfied: pytz>=2020.1 in /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages (from pandas) (2024.2)
@@ -25,6 +19,18 @@ Requirement already satisfied: six>=1.5 in /openhands/poetry/openhands-ai-5O4_aC
 [notice] A new release of pip is available: 24.2 -> 24.3.1
 [notice] To update, run: pip install --upgrade pip
 Note: you may need to restart the kernel to use updated packages.
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+import pandas as pd
+
+# Load the dataset
+file_path = 'wiki4he/wiki4HE.csv'
+data = pd.read_csv(file_path)
+
+# Display the first few rows of the dataset
+data.head()
+STDOUT/STDERR
   AGE;GENDER;DOMAIN;PhD;YEARSEXP;UNIVERSITY;UOC_POSITION;OTHER_POSITION;OTHERSTATUS;USERWIKI;PU1;PU2;PU3;PEU1;PEU2;PEU3;ENJ1;ENJ2;Qu1;Qu2;Qu3;Qu4;Qu5;Vis1;Vis2;Vis3;Im1;Im2;Im3;SA1;SA2;SA3;Use1;Use2;Use3;Use4;Use5;Pf1;Pf2;Pf3;JR1;JR2;BI1;BI2;Inc1;Inc2;Inc3;Inc4;Exp1;Exp2;Exp3;Exp4;Exp5
 0  40;0;2;1;14;1;2;?;?;0;4;4;3;5;5;3;4;4;3;3;2;2;...                                                                                                                                                                                                                                          
 1  42;0;5;1;18;1;2;?;?;0;2;3;3;4;4;3;3;4;4;4;3;3;...                                                                                                                                                                                                                                          
@@ -34,8 +40,10 @@ Note: you may need to restart the kernel to use updated packages.
 [Jupyter current working directory: /workspace]
 [Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
 EXECUTE
-# Reload the data with the correct delimiter
-data = pd.read_csv('wiki4he/wiki4HE.csv', delimiter=';')
+# Load the dataset with the correct delimiter
+data = pd.read_csv(file_path, delimiter=';')
+
+# Display the first few rows of the dataset
 data.head()
 STDOUT/STDERR
    AGE  GENDER DOMAIN  PhD YEARSEXP  UNIVERSITY UOC_POSITION OTHER_POSITION  \
@@ -57,87 +65,211 @@ STDOUT/STDERR
 [Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
 EXECUTE
 import matplotlib.pyplot as plt
-import seaborn as sns
 
-# Set up the visualizations
-sns.set(style="whitegrid")
+# Summary statistics for age and years of experience
+age_summary = data['AGE'].describe()
+years_exp_summary = data['YEARSEXP'].describe()
+
+# Count of respondents by domain
+domain_counts = data['DOMAIN'].value_counts()
+
+# Count of respondents by job position
+job_position_counts = data['UOC_POSITION'].value_counts()
+
+# Plotting the demographic information
+fig, axs = plt.subplots(2, 2, figsize=(15, 10))
 
 # Age distribution
-plt.figure(figsize=(10, 6))
-sns.histplot(data['AGE'], bins=10, kde=True)
-plt.title('Age Distribution of Respondents')
-plt.xlabel('Age')
-plt.ylabel('Frequency')
-plt.show()
+axs[0, 0].hist(data['AGE'], bins=10, color='skyblue', edgecolor='black')
+axs[0, 0].set_title('Age Distribution')
+axs[0, 0].set_xlabel('Age')
+axs[0, 0].set_ylabel('Frequency')
 
 # Years of experience distribution
-plt.figure(figsize=(10, 6))
-sns.histplot(data['YEARSEXP'], bins=10, kde=True)
-plt.title('Years of Experience Distribution of Respondents')
-plt.xlabel('Years of Experience')
-plt.ylabel('Frequency')
-plt.show()
+axs[0, 1].hist(data['YEARSEXP'], bins=10, color='lightgreen', edgecolor='black')
+axs[0, 1].set_title('Years of Experience Distribution')
+axs[0, 1].set_xlabel('Years of Experience')
+axs[0, 1].set_ylabel('Frequency')
 
-# Domain/Field of expertise distribution
-plt.figure(figsize=(10, 6))
-sns.countplot(y='DOMAIN', data=data, order=data['DOMAIN'].value_counts().index)
-plt.title('Domain/Field of Expertise Distribution of Respondents')
-plt.xlabel('Count')
-plt.ylabel('Domain')
-plt.show()
+# Domain distribution
+domain_counts.plot(kind='bar', ax=axs[1, 0], color='salmon', edgecolor='black')
+axs[1, 0].set_title('Domain Distribution')
+axs[1, 0].set_xlabel('Domain')
+axs[1, 0].set_ylabel('Frequency')
 
 # Job position distribution
-plt.figure(figsize=(10, 6))
-sns.countplot(y='UOC_POSITION', data=data, order=data['UOC_POSITION'].value_counts().index)
-plt.title('Job Position Distribution of Respondents')
-plt.xlabel('Count')
-plt.ylabel('Job Position')
+job_position_counts.plot(kind='bar', ax=axs[1, 1], color='lightcoral', edgecolor='black')
+axs[1, 1].set_title('Job Position Distribution')
+axs[1, 1].set_xlabel('Job Position')
+axs[1, 1].set_ylabel('Frequency')
+
+plt.tight_layout()
 plt.show()
+
+age_summary, years_exp_summary, domain_counts, job_position_counts
 STDOUT/STDERR
-<Figure size 1000x600 with 1 Axes>
+<Figure size 1500x1000 with 4 Axes>
 image
 
-<Figure size 1000x600 with 1 Axes>
-image
-
-<Figure size 1000x600 with 1 Axes>
-image
-
-<Figure size 1000x600 with 1 Axes>
-image
-
+(count    913.000000
+ mean      42.246440
+ std        8.058418
+ min       23.000000
+ 25%       36.000000
+ 50%       42.000000
+ 75%       47.000000
+ max       69.000000
+ Name: AGE, dtype: float64,
+ count     913
+ unique     37
+ top        10
+ freq       77
+ Name: YEARSEXP, dtype: object,
+ DOMAIN
+ 6    361
+ 1    183
+ 4    137
+ 5    101
+ 3     73
+ 2     56
+ ?      2
+ Name: count, dtype: int64,
+ UOC_POSITION
+ 6    659
+ ?    113
+ 2     68
+ 3     50
+ 4     18
+ 1      3
+ 5      2
+ Name: count, dtype: int64)
 [Jupyter current working directory: /workspace]
 [Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
 EXECUTE
-# Extract the columns related to survey questions
+# Identify columns corresponding to survey questions
 survey_columns = data.columns[10:]  # Survey questions start from the 11th column
 
-# Calculate the percentage of extreme responses (1 and 5) for each question
-extreme_responses = data[survey_columns].apply(lambda x: (x == 1).sum() + (x == 5).sum()) / len(data) * 100
+# Calculate the proportion of extreme responses (1 or 5) for each question
+extreme_responses = {}
+for col in survey_columns:
+    extreme_count = data[col].value_counts().get(1, 0) + data[col].value_counts().get(5, 0)
+    extreme_proportion = extreme_count / len(data)
+    extreme_responses[col] = extreme_proportion
 
-# Identify questions with a majority of extreme responses
-majority_extreme_responses = extreme_responses[extreme_responses > 50]
-majority_extreme_responses
+# Sort the questions by the proportion of extreme responses
+sorted_extreme_responses = sorted(extreme_responses.items(), key=lambda x: x[1], reverse=True)
+sorted_extreme_responses
 STDOUT/STDERR
-Series([], dtype: float64)
+[('SA1', 0.38663745892661555),
+ ('Qu2', 0.384446878422782),
+ ('PEU1', 0.36254107338444685),
+ ('Im1', 0.34611171960569553),
+ ('Qu1', 0.34501642935377874),
+ ('SA2', 0.343921139101862),
+ ('Inc2', 0.3231106243154436),
+ ('Im2', 0.3209200438116101),
+ ('Use5', 0.3209200438116101),
+ ('PEU2', 0.31653888280394304),
+ ('SA3', 0.31653888280394304),
+ ('Inc3', 0.3143483023001095),
+ ('Use1', 0.3132530120481928),
+ ('Inc1', 0.3132530120481928),
+ ('Inc4', 0.312157721796276),
+ ('JR2', 0.29353778751369114),
+ ('PEU3', 0.29244249726177435),
+ ('Qu5', 0.28806133625410735),
+ ('Im3', 0.28806133625410735),
+ ('PU2', 0.2792990142387733),
+ ('PU3', 0.2792990142387733),
+ ('Use4', 0.2792990142387733),
+ ('JR1', 0.2792990142387733),
+ ('Qu4', 0.276013143483023),
+ ('Qu3', 0.27491785323110624),
+ ('BI2', 0.2738225629791895),
+ ('PU1', 0.26944140197152244),
+ ('Exp1', 0.2683461117196057),
+ ('BI1', 0.2606790799561884),
+ ('Exp3', 0.25848849945235486),
+ ('Use3', 0.2573932092004381),
+ ('Exp2', 0.2552026286966046),
+ ('Vis3', 0.25191675794085433),
+ ('ENJ1', 0.2508214676889376),
+ ('Pf1', 0.2508214676889376),
+ ('ENJ2', 0.2497261774370208),
+ ('Vis1', 0.2475355969331873),
+ ('Pf3', 0.2475355969331873),
+ ('Use2', 0.24534501642935377),
+ ('Exp5', 0.244249726177437),
+ ('Pf2', 0.2420591456736035),
+ ('Exp4', 0.20810514786418402),
+ ('Vis2', 0.2004381161007667)]
 [Jupyter current working directory: /workspace]
 [Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
 EXECUTE
-# Extract relevant columns for analysis
-consult_wiki = data[['DOMAIN', 'Use1']]  # Use1: Consult Wikipedia for issues related to field of expertise
-cite_wiki = data[['DOMAIN', 'Use2']]  # Use2: Cite Wikipedia in academic papers
+# List all column names to identify relevant columns
+data.columns.tolist()
+STDOUT/STDERR
+['AGE',
+ 'GENDER',
+ 'DOMAIN',
+ 'PhD',
+ 'YEARSEXP',
+ 'UNIVERSITY',
+ 'UOC_POSITION',
+ 'OTHER_POSITION',
+ 'OTHERSTATUS',
+ 'USERWIKI',
+ 'PU1',
+ 'PU2',
+ 'PU3',
+ 'PEU1',
+ 'PEU2',
+ 'PEU3',
+ 'ENJ1',
+ 'ENJ2',
+ 'Qu1',
+ 'Qu2',
+ 'Qu3',
+ 'Qu4',
+ 'Qu5',
+ 'Vis1',
+ 'Vis2',
+ 'Vis3',
+ 'Im1',
+ 'Im2',
+ 'Im3',
+ 'SA1',
+ 'SA2',
+ 'SA3',
+ 'Use1',
+ 'Use2',
+ 'Use3',
+ 'Use4',
+ 'Use5',
+ 'Pf1',
+ 'Pf2',
+ 'Pf3',
+ 'JR1',
+ 'JR2',
+ 'BI1',
+ 'BI2',
+ 'Inc1',
+ 'Inc2',
+ 'Inc3',
+ 'Inc4',
+ 'Exp1',
+ 'Exp2',
+ 'Exp3',
+ 'Exp4',
+ 'Exp5']
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+# Calculate the average response for consulting Wikipedia (Use1) and citing Wikipedia (Use2) by domain
+consult_wikipedia_by_domain = data.groupby('DOMAIN')['Use1'].mean()
+cite_wikipedia_by_domain = data.groupby('DOMAIN')['Use2'].mean()
 
-# Calculate the mean response for consulting and citing Wikipedia by domain
-consult_wiki_mean = consult_wiki.groupby('DOMAIN')['Use1'].mean()
-cite_wiki_mean = cite_wiki.groupby('DOMAIN')['Use2'].mean()
-
-# Combine the results into a single DataFrame
-wiki_usage = pd.DataFrame({
-    'Consult Wikipedia': consult_wiki_mean,
-    'Cite Wikipedia': cite_wiki_mean
-}).reset_index()
-
-wiki_usage
+consult_wikipedia_by_domain, cite_wikipedia_by_domain
 STDOUT/STDERR
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
@@ -224,12 +356,11 @@ TypeError: Could not convert string '1225214134331313342123141342214232121333313
 The above exception was the direct cause of the following exception:
 
 TypeError                                 Traceback (most recent call last)
-Cell In[1], line 6
-      3 cite_wiki = data[['DOMAIN', 'Use2']]  # Use2: Cite Wikipedia in academic papers
-      5 # Calculate the mean response for consulting and citing Wikipedia by domain
-----> 6 consult_wiki_mean = consult_wiki.groupby('DOMAIN')['Use1'].mean()
-      7 cite_wiki_mean = cite_wiki.groupby('DOMAIN')['Use2'].mean()
-      9 # Combine the results into a single DataFrame
+Cell In[1], line 2
+      1 # Calculate the average response for consulting Wikipedia (Use1) and citing Wikipedia (Use2) by domain
+----> 2 consult_wikipedia_by_domain = data.groupby('DOMAIN')['Use1'].mean()
+      3 cite_wikipedia_by_domain = data.groupby('DOMAIN')['Use2'].mean()
+      5 consult_wikipedia_by_domain, cite_wikipedia_by_domain
 
 File /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/pandas/core/groupby/groupby.py:2452, in GroupBy.mean(self, numeric_only, engine, engine_kwargs)
    2445     return self._numba_agg_general(
@@ -277,44 +408,70 @@ TypeError: agg function failed [how->mean,dtype->object]
 [Jupyter current working directory: /workspace]
 [Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
 EXECUTE
-# Convert relevant columns to numeric, coercing errors to NaN
-data['Use1'] = pd.to_numeric(data['Use1'], errors='coerce')
-data['Use2'] = pd.to_numeric(data['Use2'], errors='coerce')
+# Check unique values in Use1 and Use2 columns
+use1_unique_values = data['Use1'].unique()
+use2_unique_values = data['Use2'].unique()
 
-# Recalculate the mean response for consulting and citing Wikipedia by domain
-consult_wiki_mean = data.groupby('DOMAIN')['Use1'].mean()
-cite_wiki_mean = data.groupby('DOMAIN')['Use2'].mean()
-
-# Combine the results into a single DataFrame
-wiki_usage = pd.DataFrame({
-    'Consult Wikipedia': consult_wiki_mean,
-    'Cite Wikipedia': cite_wiki_mean
-}).reset_index()
-
-wiki_usage
+use1_unique_values, use2_unique_values
 STDOUT/STDERR
-  DOMAIN  Consult Wikipedia  Cite Wikipedia
-0      1           2.156425        1.787709
-1      2           2.272727        2.018519
-2      3           2.027778        1.777778
-3      4           2.522059        2.014815
-4      5           1.612245        1.673469
-5      6           2.064426        1.806723
-6      ?           3.500000        3.000000
+(array(['3', '2', '1', '4', '5', '?'], dtype=object),
+ array(['1', '2', '3', '4', '5', '?'], dtype=object))
 [Jupyter current working directory: /workspace]
 [Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
 EXECUTE
-# Visualize the results
-plt.figure(figsize=(14, 8))
-wiki_usage_melted = wiki_usage.melt(id_vars='DOMAIN', var_name='Usage Type', value_name='Mean Response')
-sns.barplot(x='Mean Response', y='DOMAIN', hue='Usage Type', data=wiki_usage_melted)
-plt.title('Mean Response for Consulting and Citing Wikipedia by Domain')
-plt.xlabel('Mean Response')
-plt.ylabel('Domain')
-plt.legend(title='Usage Type')
+import numpy as np
+
+# Replace '?' with NaN
+data['Use1'] = data['Use1'].replace('?', np.nan).astype(float)
+data['Use2'] = data['Use2'].replace('?', np.nan).astype(float)
+
+# Calculate the average response for consulting Wikipedia (Use1) and citing Wikipedia (Use2) by domain
+consult_wikipedia_by_domain = data.groupby('DOMAIN')['Use1'].mean()
+cite_wikipedia_by_domain = data.groupby('DOMAIN')['Use2'].mean()
+
+consult_wikipedia_by_domain, cite_wikipedia_by_domain
+STDOUT/STDERR
+(DOMAIN
+ 1    2.156425
+ 2    2.272727
+ 3    2.027778
+ 4    2.522059
+ 5    1.612245
+ 6    2.064426
+ ?    3.500000
+ Name: Use1, dtype: float64,
+ DOMAIN
+ 1    1.787709
+ 2    2.018519
+ 3    1.777778
+ 4    2.014815
+ 5    1.673469
+ 6    1.806723
+ ?    3.000000
+ Name: Use2, dtype: float64)
+[Jupyter current working directory: /workspace]
+[Jupyter Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+EXECUTE
+fig, axs = plt.subplots(1, 2, figsize=(15, 5))
+
+# Plotting the average response for consulting Wikipedia by domain
+consult_wikipedia_by_domain.plot(kind='bar', ax=axs[0], color='skyblue', edgecolor='black')
+axs[0].set_title('Average Response for Consulting Wikipedia by Domain')
+axs[0].set_xlabel('Domain')
+axs[0].set_ylabel('Average Response')
+axs[0].set_ylim(0, 5)
+
+# Plotting the average response for citing Wikipedia by domain
+cite_wikipedia_by_domain.plot(kind='bar', ax=axs[1], color='lightgreen', edgecolor='black')
+axs[1].set_title('Average Response for Citing Wikipedia by Domain')
+axs[1].set_xlabel('Domain')
+axs[1].set_ylabel('Average Response')
+axs[1].set_ylim(0, 5)
+
+plt.tight_layout()
 plt.show()
 STDOUT/STDERR
-<Figure size 1400x800 with 1 Axes>
+<Figure size 1500x500 with 2 Axes>
 image
 
 [Jupyter current working directory: /workspace]

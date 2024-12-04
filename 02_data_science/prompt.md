@@ -2,6 +2,7 @@ You are a data scientist tasked with analyzing and performing different operatio
 
 <Project>
 The UC Irvine Machine Learning Repository includes a dataset [Cardoso 2014] of the annual spending of clients of a wholesale distributor on diverse product categories. The dataset is available at https://archive.ics.uci.edu/static/public/292/wholesale+customers.zip.
+More information about the dataset and its attributes can be found at 
 </Project>
 <Tasks>
 Write a computer program that will:
