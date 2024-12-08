@@ -23,7 +23,7 @@ data = pd.read_csv("Wholesale customers data.csv")
 data = data.drop(columns=["Region"])
 data.head()
 
-# Filter the data for clients that are restaurants, hotels, and cafés (Foodservice)
+# Filter the data for clients that are restaurants, hotels, and cafÃ©s (Foodservice)
 filtered_data = data[data["Channel"] == 2].drop(columns=["Channel"])
 filtered_data.head()
 

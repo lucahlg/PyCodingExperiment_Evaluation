@@ -10,7 +10,7 @@ data = data.drop(columns=['Region'])
 # Display the first few rows of the modified DataFrame
 data.head()
 
-# Filter the data for clients that are restaurants, hotels, and cafés (Channel = 2)
+# Filter the data for clients that are restaurants, hotels, and cafÃ©s (Channel = 2)
 filtered_data = data[data['Channel'] == 2].reset_index(drop=True)
 
 # Display the first few rows of the filtered DataFrame
@@ -53,7 +53,7 @@ data = pd.read_csv(file_path)
 # Drop the Region column
 data = data.drop(columns=['Region'])
 
-# Filter the data for clients that are restaurants, hotels, and cafés (Channel = 2)
+# Filter the data for clients that are restaurants, hotels, and cafÃ©s (Channel = 2)
 filtered_data = data[data['Channel'] == 2].reset_index(drop=True)
 
 # Normalize the data

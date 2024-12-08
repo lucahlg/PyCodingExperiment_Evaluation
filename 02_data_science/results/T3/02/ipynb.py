@@ -10,7 +10,7 @@ data = data.drop(columns=['Region'])
 # Display the first few rows of the dataset to verify
 data.head()
 
-# Filter the data for clients that are restaurants, hotels, and cafés
+# Filter the data for clients that are restaurants, hotels, and cafÃ©s
 filtered_data = data[data['Channel'] == 1]
 
 # Drop the Channel column as it is no longer needed

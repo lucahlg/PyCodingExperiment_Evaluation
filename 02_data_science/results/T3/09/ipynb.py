@@ -10,7 +10,7 @@ data = data.drop(columns=['Region'])
 # Display the first few rows of the modified dataset
 data.head()
 
-# Filter the data for clients that are restaurants, hotels, and cafés (Channel 1 and 2)
+# Filter the data for clients that are restaurants, hotels, and cafÃ©s (Channel 1 and 2)
 filtered_data = data[data['Channel'].isin([1, 2])]
 
 # Display the first few rows of the filtered dataset
